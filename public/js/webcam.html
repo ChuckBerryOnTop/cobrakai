@@ -20,37 +20,46 @@
     </div>
     <canvas  id="myCanvas" width="400" height="350"></canvas>
     
-    <button id="snap"onclick="snapshot()">Snapshot</button>
+    <button id="snap" onclick="snapshot()">Snapshot</button>
 
-    <iframe id="frame" src=""></iframe>
+    <button id="cam" onclick="startCam()">Camera</button>
+
+    <button id="close" onclick="close()">Close</button>
+
+    <!--<iframe id="frame" src=""></iframe>-->
     <script>
 var vid = document.querySelector("#videoElement");
 
 //const mediaSource = new MediaSource();
 //vid.src = mediaSource
+function startCam() {
+    if (navigator.webkitGetUserMedia!=null) {
 
-if (navigator.webkitGetUserMedia!=null) {
+        var options = { 
+            video:true, 
+            audio:false 
+        };  
+        navigator.webkitGetUserMedia(options, 
+            function(stream) { 
+            vid.src = window.webkitURL.createObjectURL(stream);
+            //vid.src = window.URL.HTMLMediaElement.srcObject
+            //const mediaSource = new MediaSource();
+            //vid.src = stream
+            //vid.src = mediaSource;
+            
+            localstream = stream;
+            vid.play();
+            console.log("streaming");
+        }, 
+            function(e) { 
+            console.log("background error : " + e);
+            }); 
+    } 
+}
 
-    var options = { 
-        video:true, 
-        audio:false 
-    };  
-    navigator.webkitGetUserMedia(options, 
-        function(stream) { 
-        vid.src = window.webkitURL.createObjectURL(stream);
-        //vid.src = window.URL.HTMLMediaElement.srcObject
-        //const mediaSource = new MediaSource();
-        //vid.src = stream
-        //vid.src = mediaSource;
-        
-        localstream = stream;
-        vid.play();
-        console.log("streaming");
-    }, 
-        function(e) { 
-        console.log("background error : " + e);
-        }); 
-} 
+function close() {
+    vid.stop()
+}
  //---------------------
       // TAKE A SNAPSHOT CODE
       //---------------------
