@@ -21,9 +21,13 @@
     <canvas  id="myCanvas" width="400" height="350"></canvas>
     
     <button id="snap"onclick="snapshot()">Snapshot</button>
-   
+
+    <iframe id="frame" src=""></iframe>
     <script>
 var vid = document.querySelector("#videoElement");
+
+//const mediaSource = new MediaSource();
+//vid.src = mediaSource
 
 if (navigator.webkitGetUserMedia!=null) {
 
@@ -66,35 +70,7 @@ function snapshot() {
     dataURL = canvas.toDataURL('image/png');      
     console.log("URL: "+dataURL) 
 }
-/*snapshot(
-    function(dataUrl) {
-    console.log('RESULT:', dataUrl)
-});*/
-/*
-function toDataURL(src, callback, outputFormat) {
-  var img = new Image();
-  img.crossOrigin = 'Anonymous';
-  img.onload = function() {
-    canvas = document.getElementById("myCanvas");
-    ctx = canvas.getContext('2d');
-    ctx.drawImage(this, 0, 0);
-    dataURL = canvas.toDataURL(outputFormat);
-    callback(dataURL);
-  };
-  img.src = src;
-  if (img.complete || img.complete === undefined) {
-    img.src = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
-    img.src = src;
-  }
-}
-
-toDataURL(
-  'https://www.gravatar.com/avatar/d50c83cc0c6523b4d3f6085295c953e0',
-  function(dataUrl) {
-    console.log('RESULT:', dataUrl)
-  }
-)
- */       
+      
         
         
         
