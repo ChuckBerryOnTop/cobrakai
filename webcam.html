@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #snap {
+            float: right;
+        }
+    </style>
+</head>
+<body onload="init()">
+    
+    <div id="container">
+        <video autoplay="true" id="videoElement">
+         
+        </video>
+    </div>
+    <canvas  id="myCanvas" width="400" height="350"></canvas>
+    
+    <button id="snap"onclick="snapshot()">Snapshot</button>
+   
+    <script>
+var vid = document.querySelector("#videoElement");
+
+if (navigator.webkitGetUserMedia!=null) {
+
+    var options = { 
+        video:true, 
+        audio:false 
+    };  
+    navigator.webkitGetUserMedia(options, 
+        function(stream) { 
+        vid.src = window.webkitURL.createObjectURL(stream);
+        //vid.src = window.URL.HTMLMediaElement.srcObject
+        //const mediaSource = new MediaSource();
+        //vid.src = stream
+        //vid.src = mediaSource;
+        
+        localstream = stream;
+        vid.play();
+        console.log("streaming");
+    }, 
+        function(e) { 
+        console.log("background error : " + e);
+        }); 
+} 
+ //---------------------
+      // TAKE A SNAPSHOT CODE
+      //---------------------
+var canvas, ctx;
+
+function init() {
+    // Get the canvas and obtain a context for
+    // drawing in it
+    canvas = document.getElementById("myCanvas");
+    ctx = canvas.getContext('2d');
+}
+
+function snapshot() {    
+    ctx.drawImage(vid, 0,0, canvas.width, canvas.height);   
+    canvas = document.getElementById("myCanvas");
+    ctx = canvas.getContext('2d');        
+    dataURL = canvas.toDataURL('image/png');      
+    console.log("URL: "+dataURL) 
+}
+/*snapshot(
+    function(dataUrl) {
+    console.log('RESULT:', dataUrl)
+});*/
+/*
+function toDataURL(src, callback, outputFormat) {
+  var img = new Image();
+  img.crossOrigin = 'Anonymous';
+  img.onload = function() {
+    canvas = document.getElementById("myCanvas");
+    ctx = canvas.getContext('2d');
+    ctx.drawImage(this, 0, 0);
+    dataURL = canvas.toDataURL(outputFormat);
+    callback(dataURL);
+  };
+  img.src = src;
+  if (img.complete || img.complete === undefined) {
+    img.src = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
+    img.src = src;
+  }
+}
+
+toDataURL(
+  'https://www.gravatar.com/avatar/d50c83cc0c6523b4d3f6085295c953e0',
+  function(dataUrl) {
+    console.log('RESULT:', dataUrl)
+  }
+)
+ */       
+        
+        
+        
+        
+    
+    
+    
+    </script>
+</body>
+</html>
