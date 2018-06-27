@@ -1,2 +1,4 @@
 node_modules
+
 apikey.json
+\.DS_Store
