@@ -149,7 +149,7 @@ console.log(img2);
 var buf = new Buffer(data, 'base64');
 fs.writeFile('image.png', buf);*/
 
-        //logo.logo(pic)
+        logo.logo(uniqueRandomImageName+'.png');
 
     });
 
