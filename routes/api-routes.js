@@ -1,10 +1,12 @@
 const logo = require('../models/logo');
-
+//let myResult = require('../models/logo');
+let sendGET;
 //var imageS = new Image();
 //var imageS = document.createElement('img');
 module.exports = (app) => {
+    //let myResult1;
     app.post("/api/logo", (req, res) => {
-        console.log(JSON.stringify(req.body.key));
+       // console.log(JSON.stringify(req.body.key));
         //console.log(req);
         //getLogo(req.body);        
         //logo.logo('jumpman.jpg')
@@ -119,11 +121,27 @@ module.exports = (app) => {
         // Save decoded binary image to disk
         try
         {
-        require('fs').writeFile(userUploadedImagePath, imageBuffer.data,  
+            const p = new Promise(function(resolve, reject) {
+                resolve(
+                        require('fs').writeFile(userUploadedImagePath, imageBuffer.data,  
                                 function() 
                                 {
                                   console.log('DEBUG - feed:message: Saved to disk image attached by user:', userUploadedImagePath);
+                                  return logo.logo(uniqueRandomImageName+'.png');
+
+                                  
+                                })
+                            )
+                        })     
+                                
+                                p.then(function(data) {let myResult = require('../models/logo')
+    
+                                console.log("Res: "+JSON.stringify(myResult.myResult))
+                                //sendGET = myResult.myResult
+                                sendGET = myResult.myResult;
+                                console.log("Get: "+sendGET);
                                 });
+                                //myResult1 = logo.logo(uniqueRandomImageName+'.png')
         }
         catch(error)
         {
@@ -149,9 +167,27 @@ console.log(img2);
 var buf = new Buffer(data, 'base64');
 fs.writeFile('image.png', buf);*/
 
-        logo.logo(uniqueRandomImageName+'.png');
-
+      // logo.logo(uniqueRandomImageName+'.png'); //res.body = 
+       //console.log(res)
+   //myResult = logo.logo(uniqueRandomImageName+'.png')
+    //console.log("Res: "+JSON.stringify(myResult))
+    /*let myResult = require('../models/logo');
+    
+     console.log("Res: "+JSON.stringify(myResult.myResult))
+     sendGET = myResult.myResult
+     console.log("Get: "+sendGET);*/
+     
+     
+     
     });
+    app.get("/api/logo", function(req, res) {
+        /*let myResult = require('../models/logo');
+        console.log("Res2: "+JSON.stringify(myResult))
+        return res.json(myResult.myResult);*/        
+        console.log("Res2: "+JSON.stringify(sendGET))
+        return res.json(sendGET);
+      }); 
+    
 
 
 }

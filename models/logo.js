@@ -1,9 +1,11 @@
 
 const vision = require('@google-cloud/vision');
 
-const client = new vision.ImageAnnotatorClient({ keyFilename: "C:/Users/dankn/Documents/homework/cobrakai/apikey.json" });  
-
+const client = new vision.ImageAnnotatorClient({ keyFilename: "C:/Users/dankn/Documents/homework/cobrakai/apikey.json" });  //"C:/Users/dankn/Documents/homework/cobrakai/"   "./apikey.json"
+let myResult = "test";
+//module.exports.myResult = myResult;
 module.exports.logo = function (thisFile) {
+  //let myResult;
   let fileName = thisFile;
   client
     .webDetection(fileName)
@@ -16,11 +18,16 @@ module.exports.logo = function (thisFile) {
         );
         webDetection.bestGuessLabels.forEach(label => {
           console.log(`  Label: ${label.label}`);
+          myResult = label.label;
+          module.exports.myResult = myResult;
+          console.log("res1: "+myResult);
         });
+       
       }
     })
     .catch(err => {
       console.error('ERROR:', err);
     });
+    
 }
   

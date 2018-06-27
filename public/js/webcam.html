@@ -7,7 +7,7 @@
     <title>Document</title>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js'></script>
     <style>
-        #snap {
+        #snap, #result {
             float: right;
         }
     </style>
@@ -27,6 +27,8 @@
     <button id="cam" onclick="startCam()">Camera</button>
 
     <button id="close" onclick="closeCam()">Close</button>
+
+    <div id="api-result">Placeholder</div>
 
     <!--<iframe id="frame" src=""></iframe>-->
     <script>
@@ -94,13 +96,45 @@ function snapshot() {
     const dataSent = {
         key: dataURL
     }
-    $.post("/api/logo", dataSent)
-        .then(function(data) {
-            console.log("image sent");
-        });        
+    $.post("/api/logo", dataSent,
+        function(data, status) {
+            //apiResponse();
+        })//.then(
+            apiResponse()
+        //);
+                
+        //apiResponse();
+    
+    
+    
+            //.then(response => response.json()) 
+            /*console.log("image sent");
+            resultDiv = document.getElementById("api-result");
+            console.log(data.json)
+            return data.json
+            resultDiv.html(data.body);*/
+            //.catch(error => console.error('Error:', error))
+            //.then(response => console.log('Success:', response));        
 }
       
-        
+function apiResponse() {
+    $.get("/api/logo", function(data) {
+    console.log("res");
+    //resultDiv = document.getElementById("api-result");
+    //resultDiv.html(data);
+    console.log(data)
+    $('#api-result').text(data);
+    
+    });
+}  
+/*$.get("/api/logo", function(data) {
+    console.log("res");
+    resultDiv = document.getElementById("api-result");
+    resultDiv.HTML(data);
+    console.log(data)
+    $('#api-result').HTML(data);
+    
+    });*/      
         
         
         
