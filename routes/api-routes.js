@@ -3,7 +3,7 @@ const logo = require('../models/logo');
 module.exports = (app) => {
     app.post("/api/logo", (req, res) => {
         console.log(JSON.stringify(req.body.key));
-
+        let uniqueRandomImageName;
         try {
             // Decoding base-64 image
             // Source: http://stackoverflow.com/questions/20267939/nodejs-write-base64-image-file
@@ -41,14 +41,14 @@ module.exports = (app) => {
             const userUploadedFeedMessagesLocation = "/Users/jeffreylee/Desktop/Homework/cobrakai/";
 
             //the piece of code is doing some weird hoisting
-            var uniqueRandomImageName = 'image-' + uniqueSHA1String;
+            uniqueRandomImageName = 'image-' + uniqueSHA1String;
             // This variable is actually an array which has 5 values,
             // The [1] value is the real image extension
-            var imageTypeDetected = imageBuffer
+            const imageTypeDetected = imageBuffer
                 .type
                 .match(imageTypeRegularExpression);
 
-            var userUploadedImagePath = userUploadedFeedMessagesLocation +
+            const userUploadedImagePath = userUploadedFeedMessagesLocation +
                 uniqueRandomImageName +
                 '.' +
                 imageTypeDetected[1];
