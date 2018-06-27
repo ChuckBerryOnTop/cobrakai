@@ -90,8 +90,11 @@ function snapshot() {
     ctx = canvas.getContext('2d');        
     dataURL = canvas.toDataURL('image/png');      
     //console.log("URL: "+dataURL);
-    console.log(dataURL);
-    $.post("/api/logo", dataURL)
+    //console.log(dataURL);
+    const dataSent = {
+        key: dataURL
+    }
+    $.post("/api/logo", dataSent)
         .then(function(data) {
             console.log("image sent");
         });        

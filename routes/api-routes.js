@@ -4,7 +4,7 @@ const logo = require('../models/logo');
 //var imageS = document.createElement('img');
 module.exports = (app) => {
     app.post("/api/logo", (req, res) => {
-        //console.log(JSON.stringify(req.body));
+        console.log(JSON.stringify(req.body.key));
         //console.log(req);
         //getLogo(req.body);        
         //logo.logo('jumpman.jpg')
@@ -98,7 +98,7 @@ module.exports = (app) => {
                                                  .digest('hex');
 
         var temp = JSON.stringify(req.body)
-        var base64Data = temp.replace(/{|}|:|"/g, "");  
+        var base64Data =   req.body.key //JSON.stringify(req.body.key);            //temp.replace(/{|}|:|"/g, "");  
         // JSON.stringify(req.body)   //data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAFeCAYAAACrXUkIAAAgAElEQVR4Xly997Nl53Ultk648YV+HYFGkwAIkBRJUYkcaWTNTGns8i92uVwu/wOucvk/c9XII4qSSYIgKY0sjaihJIqkAnMCASJ2Nzq8eMNJrrXW3ude8Gl6mnh97wnft78d1l577+I/v/q5AV2JYSgwDAP6skCDHkNZoCxKVChQDkDZT8GfYehQ1sCAHiX4nQLg3z1QFh2KokcPoOSH2x6ToUDPX0wqtMOAoixQ8Lt9h7KvAVTAUKEvWnToMAw9yrJCUVRANaDven+nH3y/AugKoOdFC94bqIpBvy/6Ev1Q6LsFWj4Qqs7f4yd7fib+5rvyp+D9UaPZrjCtK34l3tP/znXoMaDgGgx8/wFF3DfXw//NtfB3y5LrOejaenf06KsCRTk+ste68Gf5bX6Vz87PdlzModd7lR2vUunz+cx1Uep6ra7n50PTYSgqdAX3p8R6u8G3/u4f0T0+x5P79/H4/BwXmy3WmzWGbgNstxi6AeurDTZNi+3QYehb6EULoKq5b1tURYde78In4/ouKS7+2DDo3yfNgLqq0BY9UJfYcM8mLYqe+0ZZKDB0NabFDGU9QVVPtF6zaYmT69dxdn6utZgtFzg8PkKDFtuLC6xOL1H1FcrJEj1qbIs1BnS4Wl1gPu1x9+QQz3/4RUznc2yaDn29xEsvfRQ3bt3E4eEBJtMa5aRH325BScZQYjKZAQPlzmvHlS9Kyk+HYigli9xH7V/ZhSxQcEoURUkJlXzz3flty1ar1SkK/lun9aPcVN0UQ++94z5TZnnPPGc9D0nJ67Soug5VQXkZMPRcn/EUjfvOs8dn5d0afbWQfPA1hr5HVerUWaaLfvyeJFDnskPJk9lzv+rxzOtM6WwPKOIZ9Z2+R1n1lgutiV5M9+jLXrrBR2GQnPO+1geU5gFlsdV763wPJX9jOS5W2G43qGdTlHwO7nHHc8h78L17FFWLcugle70Wiv9uPZVnn3pBz8zb8X1B/TPo7tuCp4Z7w2fmnXsMnZ4qnlG/jvPqveQXee1cq7rinnFfOp0Fy8zE8iMZ4nNxVakvvT5lX6LrOp2DoaLMDGi5SNRhbY+SZyNkoB0aFKXft+x5c8pOJRkbeK4HykGp76a8lt2AoaNuiHenLiw6TPlyfLf4Ls8Q91kyzvXFBN3AZxl4C+uMgvIzSL/wv5uO8kUZbDGdUSda/nm2ZQPKHm1L6fNi8bvFH7/yp9IYXT9os/jgHU99UaIueeh4A77jJF48VrrgBnPhrTgtNqFlpai5IAOqgdeg8uRvvLkUdirIcuACU9ipBGkouIH8BDfGC8SbyyTxmjopfLQCBa8pIeci2aClk'              //'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAZABkAAD/4Q3zaHR0cDovL25zLmFkb2JlLmN...';
 
         var imageBuffer                      = decodeBase64Image(base64Data);
