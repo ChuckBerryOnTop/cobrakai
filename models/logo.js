@@ -1,10 +1,8 @@
 const vision = require('@google-cloud/vision');
 
-const client = new vision.ImageAnnotatorClient();
-  
+const client = new vision.ImageAnnotatorClient({ keyFilename: "/Users/jeffreylee/Desktop/Homework/cobrakai/apikey.json" });  
 
-module.exports = function getLogo(thisFile) {
-  
+module.exports.logo = function (thisFile) {
   let fileName = thisFile;
   client
     .webDetection(fileName)
