@@ -1,9 +1,10 @@
-
 const vision = require('@google-cloud/vision');
 
-const client = new vision.ImageAnnotatorClient();  
+const client = new vision.ImageAnnotatorClient();
+  
 
 module.exports = function getLogo(thisFile) {
+  
   let fileName = thisFile;
   client
     .webDetection(fileName)
