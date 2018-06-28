@@ -18,7 +18,7 @@ function myVision(thisFile) {
                     myResult = label.label;
                     
                     console.log("res1: "+myResult);
-                    sendGET = myResult
+                   
                     return myResult
                 });        
             }

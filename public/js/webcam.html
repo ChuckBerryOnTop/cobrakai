@@ -7,7 +7,7 @@
     <title>Document</title>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js'></script>
     <style>
-        #snap, #result {
+        #snap, #api-result {
             float: right;
         }
     </style>
@@ -24,12 +24,13 @@
     
     <button id="snap" onclick="snapshot()">Snapshot</button>
 
+    <div id="api-result">Placeholder</div>
+    <br><br>
     <button id="cam" onclick="startCam()">Camera</button>
 
     <button id="close" onclick="closeCam()">Close</button>
 
-    <div id="api-result">Placeholder</div>
-
+    
     <!--<iframe id="frame" src=""></iframe>-->
     <script>
 var vid = document.querySelector("#videoElement");
