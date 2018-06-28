@@ -86,7 +86,8 @@ function init() {
     ctx = canvas.getContext('2d');
 }
 
-function snapshot() {    
+function snapshot() { 
+    $('#snap').hide();   
     ctx.drawImage(vid, 0,0, canvas.width, canvas.height);   
     canvas = document.getElementById("myCanvas");
     ctx = canvas.getContext('2d');        
@@ -126,6 +127,7 @@ function apiResponse() {
     $('#api-result').text(data);
     
     });
+    $('#snap').show();
 }  
 /*$.get("/api/logo", function(data) {
     console.log("res");
