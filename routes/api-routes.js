@@ -2,39 +2,28 @@ let myRequest;
 let myResult = [];
 const vision = require('@google-cloud/vision');
 const client = new vision.ImageAnnotatorClient({ keyFilename: "./apikey.json" });
-function myVision(fileName) {
-    //console.log("vision")
-    //let fileName = await base64()                   //thisFile;
-    //console.log("Filename: "+fileName)
-    client
-        .webDetection(fileName)
-        .then(results => {
-            const webDetection = results[0].webDetection;    
-
-            if (webDetection.bestGuessLabels.length) {
-                console.log(
-                `Best guess labels found: ${webDetection.bestGuessLabels.length}`
-                );
-                webDetection.bestGuessLabels.forEach(label => {
-                    console.log(`  Label: ${label.label}`);
-                    myResult = label.label;
-                    
-                    console.log("res1: "+myResult);
-                   
-                    return myResult
-                });        
-            }
-        })
-        .catch(err => {
-        console.error('ERROR:', err);
-        });
-}
+const logoseq = require("../models/logoseq");
+const db = require("../models");
 
 module.exports = (app) => {    
-    app.post("/api/logo", (req, res) => {    
+    app.post("/api/logo", (req, res) => { 
+           
         myRequest = req.body.key
         console.log(myRequest);        
-        base64();             
+        base64();
+        db.ImgAdd.create({
+            image: req.body.key,
+            
+          }).then(function() {
+            // We have access to the new todo as an argument inside of the callback function
+            res.send("sucess");
+            console.log("it hit")
+          })
+            .catch(function(err) {
+            // Whenever a validation or flag fails, an error is thrown
+            // We can "catch" the error to prevent it from being "thrown", which could crash our node app
+              res.json(err);
+            });             
     });
 
     app.get("/api/logo", function(req, res) {             
@@ -123,3 +112,28 @@ try
     }  
 }
 
+function myVision(fileName) {
+   
+    client
+        .webDetection(fileName)
+        .then(results => {
+            const webDetection = results[0].webDetection;    
+
+            if (webDetection.bestGuessLabels.length) {
+                console.log(
+                `Best guess labels found: ${webDetection.bestGuessLabels.length}`
+                );
+                webDetection.bestGuessLabels.forEach(label => {
+                    console.log(`  Label: ${label.label}`);
+                    myResult = label.label;
+                    
+                    console.log("res1: "+myResult);
+                   
+                    return myResult
+                });        
+            }
+        })
+        .catch(err => {
+        console.error('ERROR:', err);
+        });
+}
