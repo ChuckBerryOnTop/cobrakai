@@ -1,8 +1,40 @@
-const logo = require('../models/logo');
+//const logo = require('../models/logo');
 //let myResult = require('../models/logo');
 let sendGET;
+
+let myResult;
+const vision = require('@google-cloud/vision');
+
+const client = new vision.ImageAnnotatorClient({ keyFilename: "C:/Users/dankn/Documents/homework/cobrakai/apikey.json" });
 //var imageS = new Image();
 //var imageS = document.createElement('img');
+function myVision(thisFile) {
+    //let myResult;
+    let fileName = thisFile;
+    client
+        .webDetection(fileName)
+        .then(results => {
+        const webDetection = results[0].webDetection;    
+
+        if (webDetection.bestGuessLabels.length) {
+            console.log(
+            `Best guess labels found: ${webDetection.bestGuessLabels.length}`
+            );
+            webDetection.bestGuessLabels.forEach(label => {
+            console.log(`  Label: ${label.label}`);
+            myResult = label.label;
+            //module.exports.myResult = myResult;
+            console.log("res1: "+myResult);
+            sendGET = myResult
+            return myResult
+            });
+        
+        }
+        })
+        .catch(err => {
+        console.error('ERROR:', err);
+        });
+}        
 module.exports = (app) => {
     //let myResult1;
     app.post("/api/logo", (req, res) => {
@@ -127,20 +159,22 @@ module.exports = (app) => {
                                 function() 
                                 {
                                   console.log('DEBUG - feed:message: Saved to disk image attached by user:', userUploadedImagePath);
-                                  return logo.logo(uniqueRandomImageName+'.png');
+                                  //return logo.logo(uniqueRandomImageName+'.png');
+                                  myVision(uniqueRandomImageName+'.png')
 
                                   
                                 })
                             )
-                        })     
+                        });     
                                 
-                                p.then(function(data) {let myResult = require('../models/logo')
+                                p.then(function(data) {//let myResult = require('../models/logo')
     
-                                console.log("Res: "+JSON.stringify(myResult.myResult))
-                                //sendGET = myResult.myResult
-                                sendGET = myResult.myResult;
+                                //console.log("Res: "+JSON.stringify(myResult.myResult))
+                                //sendGET = data
+                               // sendGET = myResult.myResult;
                                 console.log("Get: "+sendGET);
-                                });
+                                
+                            });
                                 //myResult1 = logo.logo(uniqueRandomImageName+'.png')
         }
         catch(error)
