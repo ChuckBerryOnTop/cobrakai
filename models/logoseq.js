@@ -1,19 +1,19 @@
-module.exports = function(sequelize, DataTypes) {
-    var Logo = sequelize.define("Logo", {
-     name: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-          len: [1]
-        }
-      },
+module.exports = (sequelize, DataTypes) => {
+    let ImgAdd = sequelize.define("ImgAdd", {
+    //  name: {
+    //     type: DataTypes.STRING(120), 
+    //     allowNull: false,
+    //     validate: {
+    //       len: [1]
+    //     }
+      // },
       image: {
-        type: DataTypes.TEXT,
-        allowNull: false,
-        validate: {
-          len: [1]
-        }
-      },
+        type: DataTypes.BLOB("long")//,
+        // allowNull: false,
+        // validate: {
+        //   len: [1]
+        // }
+      }
     });
-    return Post;
+    return ImgAdd;
   };
