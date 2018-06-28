@@ -52,29 +52,29 @@ module.exports = (app) => {
 
         // Regular expression for image type:
         // This regular image extracts the "jpeg" from "image/jpeg"
-        var imageTypeRegularExpression      = /\/(.*?)$/;      
+        const imageTypeRegularExpression      = /\/(.*?)$/;      
 
         // Generate random string
-        var crypto                          = require('crypto');
-        var seed                            = crypto.randomBytes(20);
-        var uniqueSHA1String                = crypto
+        const crypto                          = require('crypto');
+        const seed                            = crypto.randomBytes(20);
+        const uniqueSHA1String                = crypto
                                                .createHash('sha1')
                                                  .update(seed)
                                                  .digest('hex');
         
-        var base64Data =   req.body.key;       
+        const base64Data =   req.body.key;       
 
-        var imageBuffer                      = decodeBase64Image(base64Data);
-        var userUploadedFeedMessagesLocation = "./"    
+        const imageBuffer                      = decodeBase64Image(base64Data);
+        const userUploadedFeedMessagesLocation = "./"    
 
-        var uniqueRandomImageName            = 'image-' + uniqueSHA1String;
+        const uniqueRandomImageName            = 'image-' + uniqueSHA1String;
         // This variable is actually an array which has 5 values,
         // The [1] value is the real image extension
-        var imageTypeDetected                = imageBuffer
+        const imageTypeDetected                = imageBuffer
                                                 .type
                                                  .match(imageTypeRegularExpression);
 
-        var userUploadedImagePath            = userUploadedFeedMessagesLocation + 
+        const userUploadedImagePath            = userUploadedFeedMessagesLocation + 
                                                uniqueRandomImageName +
                                                '.' + 
                                                imageTypeDetected[1];
