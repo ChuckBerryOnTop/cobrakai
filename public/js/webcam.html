@@ -1,92 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <style>
-        #snap {
-            float: right;
-        }
-    </style>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+    
+  #myCanvas {
+    display: none;
+  }
+
+  #videoElement {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+  }
+
+#theScreen {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+  }
+ 
+
+  </style>
 </head>
-<body onload="init()">
-    
-    <div id="container">
-        <video autoplay="true" id="videoElement">
-         
-        </video>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Logo</a>
     </div>
-    <canvas  id="myCanvas" width="400" height="350"></canvas>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="jumbotron jumbotron-fluid">
+  <div id="container">
+      <video autoplay="true" id="videoElement">
+       
+      </video>
+  </div>
+  <canvas  id="myCanvas" width="400" height="350"></canvas>
+ 
+<button id="snap" onclick="snapshot()" button type="button" class="btn btn-dark">Snapshot</button>
+
+<button id="cam" onclick="startCam()" button type="button" class="btn btn-dark">Camera</button>
+
+<button id="close" onclick="close()" button type="button" class="btn btn-dark">Close</button>
+
+
+</div>
+
+  
+<div class="container text-center">    
+  <h3>What We Do</h3><br>
+  <div class="row">
+    <div class="col-sm-4">
+      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+      <p>Car deals</p>
+    </div>
+    <div class="col-sm-4"> 
+      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+      <p>More car deals</p>    
+    </div>
+    <div class="col-sm-4">
+      <div class="well">
+       <p>specs</p>
+      </div>
+      <div class="well">
+       <p>specs</p>
+      </div>
+    </div>
+  </div>
+</div><br>
+
+<footer class="container-fluid text-center">
+  <p>Footer Text</p>
+</footer>
+
+  <!--<iframe id="frame" src=""></iframe>-->
+  <script>
+    var vid = document.querySelector("#videoElement");
     
-    <button id="snap" onclick="snapshot()">Snapshot</button>
-
-    <button id="cam" onclick="startCam()">Camera</button>
-
-    <button id="close" onclick="close()">Close</button>
-
-    <!--<iframe id="frame" src=""></iframe>-->
-    <script>
-var vid = document.querySelector("#videoElement");
-
-//const mediaSource = new MediaSource();
-//vid.src = mediaSource
-function startCam() {
-    if (navigator.webkitGetUserMedia!=null) {
-
-        var options = { 
-            video:true, 
-            audio:false 
-        };  
-        navigator.webkitGetUserMedia(options, 
-            function(stream) { 
-            vid.src = window.webkitURL.createObjectURL(stream);
-            //vid.src = window.URL.HTMLMediaElement.srcObject
-            //const mediaSource = new MediaSource();
-            //vid.src = stream
-            //vid.src = mediaSource;
+    //const mediaSource = new MediaSource();
+    //vid.src = mediaSource
+    function startCam() {
+        if (navigator.webkitGetUserMedia!=null) {
+    
+            var options = { 
+                video:true, 
+                audio:false 
+            };  
+            navigator.webkitGetUserMedia(options, 
+                function(stream) { 
+                vid.src = window.webkitURL.createObjectURL(stream);
+                //vid.src = window.URL.HTMLMediaElement.srcObject
+                //const mediaSource = new MediaSource();
+                //vid.src = stream
+                //vid.src = mediaSource;
+                
+                localstream = stream;
+                vid.play();
+                console.log("streaming");
+            }, 
+                function(e) { 
+                console.log("background error : " + e);
+                }); 
+        } 
+    }
+    
+    function close() {
+        vid.stop()
+    }
+     //---------------------
+          // TAKE A SNAPSHOT CODE
+          //---------------------
+    var canvas, ctx;
+    
+    function init() {
+        // Get the canvas and obtain a context for
+        // drawing in it
+        canvas = document.getElementById("myCanvas");
+        ctx = canvas.getContext('2d');
+    }
+    
+    function snapshot() {    
+        ctx.drawImage(vid, 0,0, canvas.width, canvas.height);   
+        canvas = document.getElementById("myCanvas");
+        ctx = canvas.getContext('2d');        
+        dataURL = canvas.toDataURL('image/png');      
+        console.log("URL: "+dataURL) 
+    }
+          
             
-            localstream = stream;
-            vid.play();
-            console.log("streaming");
-        }, 
-            function(e) { 
-            console.log("background error : " + e);
-            }); 
-    } 
-}
+            
+            
+            
+        
+        
+        
+        </script>
 
-function close() {
-    vid.stop()
-}
- //---------------------
-      // TAKE A SNAPSHOT CODE
-      //---------------------
-var canvas, ctx;
+<!-- Custom Script -->
+<script src="js/view.js" type="text/javascript"></script>
+<script src="./js/webcam.js" type="text/javascript"></script>
 
-function init() {
-    // Get the canvas and obtain a context for
-    // drawing in it
-    canvas = document.getElementById("myCanvas");
-    ctx = canvas.getContext('2d');
-}
 
-function snapshot() {    
-    ctx.drawImage(vid, 0,0, canvas.width, canvas.height);   
-    canvas = document.getElementById("myCanvas");
-    ctx = canvas.getContext('2d');        
-    dataURL = canvas.toDataURL('image/png');      
-    console.log("URL: "+dataURL) 
-}
-      
-        
-        
-        
-        
-    
-    
-    
-    </script>
 </body>
 </html>
