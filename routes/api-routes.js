@@ -1,34 +1,40 @@
 let myRequest;
 let myResult;
+let wiki;
+const axios = require("axios");
 const vision = require('@google-cloud/vision');
-const client = new vision.ImageAnnotatorClient({ keyFilename: "./apikey.json" });
+const client = new vision.ImageAnnotatorClient({
+    keyFilename: "./apikey.json"
+});
 const logoseq = require("../models/logoseq");
 const db = require("../models");
 
-module.exports = (app) => {    
-    app.post("/api/logo", (req, res) => { 
-           
+module.exports = (app) => {
+    app.post("/api/logo", (req, res) => {
+
         myRequest = req.body.key
         // console.log(myRequest);        
-        base64();           
+        base64();
     });
 
-    app.get("/api/logo", function(req, res) {             
-        console.log("Res2: "+JSON.stringify(myResult))
+    app.get("/api/logo", function (req, res) {
+        console.log("Res2: " + JSON.stringify(myResult))
         return res.json(myResult);
-    }); 
+    });
 }
 
-function create (log){
-    
+function create(log1, log2) {
+
     db.Classify.create({
-        
-        name: log,
+
+        name: log1,
+        summary: log2
+
     })
     //    })      .then(function() {
     //     // We have access to the new todo as an argument inside of the callback function
     //     res.send("sucess");
-        
+
     //   })
     //     .catch(function(err) {
     //     // Whenever a validation or flag fails, an error is thrown
@@ -40,108 +46,111 @@ function create (log){
 
 
 async function base64() {
-try
-{
-    // Decoding base-64 image
-    // Source: http://stackoverflow.com/questions/20267939/nodejs-write-base64-image-file
-    function decodeBase64Image(dataString) 
-    {
-      const matches = dataString.match(/^data:([A-Za-z-+\/]+);base64,(.+)$/);
-      let response = {};
+    try {
+        // Decoding base-64 image
+        // Source: http://stackoverflow.com/questions/20267939/nodejs-write-base64-image-file
+        function decodeBase64Image(dataString) {
+            const matches = dataString.match(/^data:([A-Za-z-+\/]+);base64,(.+)$/);
+            let response = {};
 
-      if (matches.length !== 3) 
-      {
-        return new Error('Invalid input string');
-      }
+            if (matches.length !== 3) {
+                return new Error('Invalid input string');
+            }
 
-      response.type = matches[1];
-      response.data = new Buffer(matches[2], 'base64');
+            response.type = matches[1];
+            response.data = new Buffer(matches[2], 'base64');
 
-      return response;
-    }
+            return response;
+        }
 
-    // Regular expression for image type:
-    // This regular image extracts the "jpeg" from "image/jpeg"
-    const imageTypeRegularExpression      = /\/(.*?)$/;      
+        // Regular expression for image type:
+        // This regular image extracts the "jpeg" from "image/jpeg"
+        const imageTypeRegularExpression = /\/(.*?)$/;
 
-    // Generate random string
-    const crypto                          = require('crypto');
-    const seed                            = crypto.randomBytes(20);
-    const uniqueSHA1String                = crypto
-                                           .createHash('sha1')
-                                             .update(seed)
-                                             .digest('hex');
-    
-   // const base64Data =   req.body.key; 
-   const base64Data = myRequest;        
+        // Generate random string
+        const crypto = require('crypto');
+        const seed = crypto.randomBytes(20);
+        const uniqueSHA1String = crypto
+            .createHash('sha1')
+            .update(seed)
+            .digest('hex');
 
-    const imageBuffer                      = decodeBase64Image(base64Data);
-    const userUploadedFeedMessagesLocation = "./"    
+        // const base64Data =   req.body.key; 
+        const base64Data = myRequest;
 
-    const uniqueRandomImageName            = 'image-' + uniqueSHA1String;
-    // This variable is actually an array which has 5 values,
-    // The [1] value is the real image extension
-    const imageTypeDetected                = imageBuffer
-                                            .type
-                                             .match(imageTypeRegularExpression);
+        const imageBuffer = decodeBase64Image(base64Data);
+        const userUploadedFeedMessagesLocation = "./"
 
-    const userUploadedImagePath            = userUploadedFeedMessagesLocation + 
-                                           uniqueRandomImageName +
-                                           '.' + 
-                                           imageTypeDetected[1];
+        const uniqueRandomImageName = 'image-' + uniqueSHA1String;
+        // This variable is actually an array which has 5 values,
+        // The [1] value is the real image extension
+        const imageTypeDetected = imageBuffer
+            .type
+            .match(imageTypeRegularExpression);
 
-    // Save decoded binary image to disk
-    try
-    {
-        const prom = new Promise(function(resolve, reject) {
+        const userUploadedImagePath = userUploadedFeedMessagesLocation +
+            uniqueRandomImageName +
+            '.' +
+            imageTypeDetected[1];
 
-        
-        require('fs').writeFile(userUploadedImagePath, imageBuffer.data,  
-            function() 
-            {
-                console.log('DEBUG - feed:message: Saved to disk image attached by user:', userUploadedImagePath);                                
-               // myVision(uniqueRandomImageName+'.png');    
-                //return uniqueRandomImageName+'.png' 
-                resolve(uniqueRandomImageName+'.png')                             
-            }); 
-        });
-        prom.then(function(value) {
-            myVision(value)
-        })                        
-    }
-    catch(error)
-    {
+        // Save decoded binary image to disk
+        try {
+            const prom = new Promise(function (resolve, reject) {
+
+
+                require('fs').writeFile(userUploadedImagePath, imageBuffer.data,
+                    function () {
+                        console.log('DEBUG - feed:message: Saved to disk image attached by user:', userUploadedImagePath);
+                        // myVision(uniqueRandomImageName+'.png');    
+                        //return uniqueRandomImageName+'.png' 
+                        resolve(uniqueRandomImageName + '.png')
+                    });
+            });
+            prom.then(function (value) {
+                myVision(value)
+            })
+        } catch (error) {
+            console.log('ERROR:', error);
+        }
+    } catch (error) {
         console.log('ERROR:', error);
     }
-    }
-    catch(error)
-    {
-        console.log('ERROR:', error);
-    }  
 }
 
 function myVision(fileName) {
-   
+
     client
         .webDetection(fileName)
         .then(results => {
-            const webDetection = results[0].webDetection;    
+            const webDetection = results[0].webDetection;
 
             if (webDetection.bestGuessLabels.length) {
                 console.log(
-                `Best guess labels found: ${webDetection.bestGuessLabels.length}`
+                    `Best guess labels found: ${webDetection.bestGuessLabels.length}`
                 );
                 webDetection.bestGuessLabels.forEach(label => {
                     console.log(`  Label: ${label.label}`);
                     myResult = label.label;
+
+                    //axios api call 
+                    var searchTerm = label.label;
+                    var url2 = `https://en.wikipedia.org/api/rest_v1/page/summary/${searchTerm}`;
+
+                    axios.get(url2)
+                        .then(function (response) {
+                            console.log(response.data.extract);
+                            create(myResult, response.data.extract);
+                        })
+                        .catch(function (error) {
+                            console.log(error);
+                        });
+
                     
-                    console.log("res1: "+myResult);
-                    create(myResult);
-                    return myResult
-                });        
+                    return myResult;
+                });
             }
         })
         .catch(err => {
-        console.error('ERROR:', err);
+            console.error('ERROR:', err);
         });
 }

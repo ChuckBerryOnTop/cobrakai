@@ -7,6 +7,11 @@ module.exports = (sequelize, DataTypes) => {
         //   len: [1]
         // }
       },
+
+      summary: {
+        type: DataTypes.TEXT, 
+        allowNull: false,
+      },
       // image: {
       //   type: DataTypes.BLOB("long")//,
       //   // allowNull: false,

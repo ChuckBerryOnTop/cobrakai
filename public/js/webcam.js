@@ -82,9 +82,10 @@ function init() {
 
 function snapshot() { 
     $('#snap').hide();   
-    ctx.drawImage(vid, 0,0, canvas.width, canvas.height);   
+       
     canvas = document.getElementById("myCanvas");
-    ctx = canvas.getContext('2d');        
+    ctx = canvas.getContext('2d');   
+    ctx.drawImage(vid, 0,0, canvas.width, canvas.height);     
     dataURL = canvas.toDataURL('image/png');    
     //console.log(dataURL);
     const dataSent = {
@@ -98,8 +99,7 @@ function snapshot() {
 }
       
 function apiResponse() {
-    $.get("/api/logo", function(data) {
-    console.log("res");    
+    $.get("/api/logo", function(data) {   
     console.log(data)
     $('#api-result').text(data);
     
