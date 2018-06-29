@@ -82,9 +82,10 @@ function init() {
 
 function snapshot() { 
     $('#snap').hide();   
-    ctx.drawImage(vid, 0,0, canvas.width, canvas.height);   
+      
     canvas = document.getElementById("myCanvas");
-    ctx = canvas.getContext('2d');        
+    ctx = canvas.getContext('2d'); 
+    ctx.drawImage(vid, 0,0, canvas.width, canvas.height);        
     dataURL = canvas.toDataURL('image/png');    
     //console.log(dataURL);
     const dataSent = {
@@ -101,8 +102,13 @@ function apiResponse() {
     $.get("/api/logo", function(data) {
     console.log("res");    
     console.log(data)
-    $('#api-result').text(data);
-    
+    $('#api-result').text(data.arr1);
+    $('#api-result2').text(data.arr2);
+    if (data.arr3[0] != undefined) {
+        $('#api-result3').text(data.arr3[0].description);
+    } else {
+        $('#api-result3').text("No text result");
+    }
     });
     $('#snap').show();
 }  

@@ -1,39 +1,14 @@
 let myRequest;
-let myResult = [];
+//let myResult = [];
+let myResult = {arr1:[], arr2:[], arr3:[]};
 const vision = require('@google-cloud/vision');
 const client = new vision.ImageAnnotatorClient({ keyFilename: "./apikey.json" });
-function myVision(fileName) {
-    //console.log("vision")
-    //let fileName = await base64()                   //thisFile;
-    //console.log("Filename: "+fileName)
-    client
-        .webDetection(fileName)
-        .then(results => {
-            const webDetection = results[0].webDetection;    
 
-            if (webDetection.bestGuessLabels.length) {
-                console.log(
-                `Best guess labels found: ${webDetection.bestGuessLabels.length}`
-                );
-                webDetection.bestGuessLabels.forEach(label => {
-                    console.log(`  Label: ${label.label}`);
-                    myResult = label.label;
-                    
-                    console.log("res1: "+myResult);
-                   
-                    return myResult
-                });        
-            }
-        })
-        .catch(err => {
-        console.error('ERROR:', err);
-        });
-}
 
 module.exports = (app) => {    
     app.post("/api/logo", (req, res) => {    
         myRequest = req.body.key
-        console.log(myRequest);        
+        //console.log(myRequest);        
         base64();             
     });
 
@@ -42,7 +17,7 @@ module.exports = (app) => {
         return res.json(myResult);
     }); 
 }
-async function base64() {
+async function base64() {   
 try
 {
     // Decoding base-64 image
@@ -109,7 +84,10 @@ try
             }); 
         });
         prom.then(function(value) {
-            myVision(value)
+            myResult = {arr1:[], arr2:[], arr3:[]}
+            myVision(value);
+            myVision2(value);
+            myVision4(value);
         })                        
     }
     catch(error)
@@ -123,3 +101,74 @@ try
     }  
 }
 
+function myVision(fileName) {
+   
+    client
+        .webDetection(fileName)
+        .then(results => {
+            const webDetection = results[0].webDetection;    
+
+            if (webDetection.bestGuessLabels.length) {
+                console.log(
+                `Best guess labels found: ${webDetection.bestGuessLabels.length}`
+                );
+                webDetection.bestGuessLabels.forEach(label => {
+                    console.log(`  Label: ${label.label}`);
+                    myResult.arr1.push(label.label);
+                    //myResult = label.label;
+                    
+                    //console.log("res1: "+myResult);
+                   
+                    //return myResult
+                });        
+            }
+        })
+        .catch(err => {
+        console.error('ERROR:', err);
+        });
+}
+
+
+function myVision2(fileName) {
+    client
+  .labelDetection(fileName)
+  .then(results => {
+    const labels = results[0].labelAnnotations;
+
+    console.log('Labels:');
+    //labels.forEach(label => console.log(label.description));
+    labels.forEach(label => myResult.arr2.push(label.description));
+    //myResult.push(label.description);
+                    
+                    console.log("res1: "+myResult);
+                   
+                    //return myResult
+  })
+  .catch(err => {
+    console.error('ERROR:', err);
+  });
+}
+function myVision3(fileName) {
+    client
+    .logoDetection(fileName)
+    .then(results => {
+        const logos = results[0].logoAnnotations;
+        console.log('Logos:');
+        logos.forEach(logo => console.log(logo));
+    })
+    .catch(err => {
+        console.error('ERROR:', err);
+    });
+}
+function myVision4(fileName) {
+    client
+    .textDetection(fileName)
+    .then(results => {
+        const detections = results[0].textAnnotations;
+        console.log('Text:');
+        detections.forEach(text => myResult.arr3.push(text));  //text => console.log(text)
+    })
+    .catch(err => {
+        console.error('ERROR:', err);
+    });
+}    
