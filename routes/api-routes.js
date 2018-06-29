@@ -1,5 +1,5 @@
 let myRequest;
-let myResult = [];
+let myResult;
 const vision = require('@google-cloud/vision');
 const client = new vision.ImageAnnotatorClient({ keyFilename: "./apikey.json" });
 const logoseq = require("../models/logoseq");
@@ -9,21 +9,8 @@ module.exports = (app) => {
     app.post("/api/logo", (req, res) => { 
            
         myRequest = req.body.key
-        console.log(myRequest);        
-        base64();
-        db.ImgAdd.create({
-            image: req.body.key,
-            
-          }).then(function() {
-            // We have access to the new todo as an argument inside of the callback function
-            res.send("sucess");
-            console.log("it hit")
-          })
-            .catch(function(err) {
-            // Whenever a validation or flag fails, an error is thrown
-            // We can "catch" the error to prevent it from being "thrown", which could crash our node app
-              res.json(err);
-            });             
+        // console.log(myRequest);        
+        base64();           
     });
 
     app.get("/api/logo", function(req, res) {             
@@ -31,6 +18,27 @@ module.exports = (app) => {
         return res.json(myResult);
     }); 
 }
+
+function create (log){
+    
+    db.Classify.create({
+        
+        name: log,
+    })
+    //    })      .then(function() {
+    //     // We have access to the new todo as an argument inside of the callback function
+    //     res.send("sucess");
+        
+    //   })
+    //     .catch(function(err) {
+    //     // Whenever a validation or flag fails, an error is thrown
+    //     // We can "catch" the error to prevent it from being "thrown", which could crash our node app
+    //       res.json(err);
+    //     });
+}
+
+
+
 async function base64() {
 try
 {
@@ -128,7 +136,7 @@ function myVision(fileName) {
                     myResult = label.label;
                     
                     console.log("res1: "+myResult);
-                   
+                    create(myResult);
                     return myResult
                 });        
             }
