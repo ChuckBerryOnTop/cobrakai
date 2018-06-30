@@ -117,10 +117,11 @@ function snapshot() {
         console.log(img);
         if (count > 0) {
           $('#faceTag').text('Face '+count+' Detected');
+          $('#photos').text("");
           for (var ii = 0; ii < count; ii++) {
             var arr = response.imgUrls;
             console.log(arr[ii]);
-            displayImageFaces(arr[ii], count);
+            displayImageFaces(arr[ii], 1);
           }
         }
         else{
