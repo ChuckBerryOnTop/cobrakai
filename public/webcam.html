@@ -20,7 +20,7 @@
       padding: 25px;
     }
     
-  #myCanvas {
+  #myCanvas, #snap {
     display: none;
   }
   #videoElement {
@@ -77,7 +77,7 @@
 
 <button id="cam" onclick="startCam()" button type="button" class="btn btn-dark">Camera</button>
 
-<button id="close" onclick="close()" button type="button" class="btn btn-dark">Close</button>
+<button id="close" onclick="closeCam()" button type="button" class="btn btn-dark">Close</button>
 
 
 </div>
@@ -96,7 +96,7 @@
     </div>
     <div class="col-sm-4">
       <div class="well">
-       <p>specs</p>
+       <p id="img">specs</p>
       </div>
       <div class="well">
        <p>specs</p>
