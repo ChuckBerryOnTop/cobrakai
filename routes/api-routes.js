@@ -2,7 +2,7 @@ let myRequest;
 //let myResult = [];
 let myResult = {arr1:[], arr2:[], arr3:[]};
 const vision = require('@google-cloud/vision');
-const client = new vision.ImageAnnotatorClient({ keyFilename: "./apikey.json" });
+const client = new vision.ImageAnnotatorClient({ keyFilename: "./VidWall-e4a178d8b757.json" });
 
 
 module.exports = (app) => {    
@@ -29,20 +29,23 @@ module.exports = (app) => {
        /* prom1 = new Promise((resolve, reject) => {
             resolve(writeBase64())
         });*/
-        async function callVis() {
-            const result = await myVision('a-img2.png');
-            res.json(result)
+        async function callVis(fileName) {
+            myResult.arr1 = await myVision(fileName);
+            myResult.arr2 = await myVision2(fileName);
+            myResult.arr3 = await myVision4(fileName);
+            console.log("myResult: "+JSON.stringify(myResult));
+            res.json(myResult)
         }
-        callVis();
+        //callVis();
        prom1 = new Promise((resolve, reject) => {
             const imgFix = myRequest.replace(/data:image\/png;base64,/gi, "")    
             let img = new Buffer(imgFix, 'base64');    
             const fileName = 'a-img'+rnd()+rnd()+rnd();
             require('fs').writeFile("./"+fileName+'.png', img, function() {
                 console.log('FILE SAVED AS: '+fileName+'.png'); 
-                //resolve(fileName+'.png');
-                resolve() 
-                return fileName+'.png'              
+                resolve(fileName+'.png');
+                //resolve() 
+                //return fileName+'.png'              
             })
             function rnd() {
                 const rnd = Math.floor(Math.random() * 10);
@@ -52,8 +55,10 @@ module.exports = (app) => {
             //return fileName+'.png';
         });
        prom1.then((value) => {
+           callVis(value);
             //myResult = {arr1:[], arr2:[], arr3:[]}
           /*  myVision(value);
+          
             myVision2(value);
             myVision4(value);*/
             //res.json(value);
@@ -68,6 +73,7 @@ module.exports = (app) => {
         .then((data) => {
             console.log('ok')
             console.log(data)
+            //res.json(myResult)
             //res.json(data)
             //return res.json(myResult)
         })
@@ -202,7 +208,7 @@ function myVision(fileName) {
                 );
                 webDetection.bestGuessLabels.forEach(label => {
                     console.log(`  Label: ${label.label}`);
-                    myResult.arr1.push(label.label);
+                    //myResult.arr1.push(label.label);
                     //myResult = label.label;
                     
                     //console.log("res1: "+myResult);
@@ -221,6 +227,7 @@ function myVision(fileName) {
 
 function myVision2(fileName) {
     return new Promise((resolve) => {
+        let myArray = []
         client
         .labelDetection(fileName)
         .then(results => {
@@ -228,16 +235,17 @@ function myVision2(fileName) {
 
             console.log('Labels:');
             //labels.forEach(label => console.log(label.description));
-            labels.forEach(label => myResult.arr2.push(label.description));
+            labels.forEach(label => myArray.push(label.description));  //myResult.arr2
             //myResult.push(label.description);
                             
-                            console.log("res1: "+myResult);
-                        
-                            //return myResult
+                console.log("res1: "+myArray);
+                resolve(myArray);    
+                //return myResult
         })
         .catch(err => {
             console.error('ERROR:', err);
         });
+
     })
     
 }
@@ -258,12 +266,14 @@ function myVision3(fileName) {
 }
 function myVision4(fileName) {
     return new Promise((resolve) => {
+        let myArray = [];
         client
         .textDetection(fileName)
         .then(results => {
             const detections = results[0].textAnnotations;
             console.log('Text:');
-            detections.forEach(text => myResult.arr3.push(text));  //text => console.log(text)
+            detections.forEach(text => myArray.push(text));  //text => console.log(text) myResult.arr3
+            resolve(myArray);
         })
         .catch(err => {
             console.error('ERROR:', err);
@@ -272,8 +282,9 @@ function myVision4(fileName) {
     
 }    
 
-async function writeBase64() {
-    //let count = 2;
+function writeBase64() {
+    return new Promise((resolve) => {
+        //let count = 2;
    // return new Promise((resolve) => {
     const imgFix = myRequest.replace(/data:image\/png;base64,/gi, "")
     /*const img = Buffer.from(imgFix, 'base64').toString('ascii');
@@ -288,23 +299,25 @@ async function writeBase64() {
 
    // const fileName = 'a-img'+count;
     const fileName = 'a-img'+rnd()+rnd()+rnd();
-    const p = new Promise((resolve) => {
+   // const p = new Promise((resolve) => {
     require('fs').writeFile("./"+fileName+'.png', img, function() {
         console.log('FILE SAVED AS:'+fileName+'.png');
         resolve(fileName+'.png')
         //return fileName+'.png';
     })
 
-})
+//})
     function rnd() {
         const rnd = Math.floor(Math.random() * 10);
         return rnd;
     }
-    p.then((value) => {
+    })
+    
+   /* p.then((value) => {
         myVision(value);
         myVision2(value);
         myVision4(value);
-    })
+    })*/
     //resolve(fileName+'.png')
     //return fileName+'.png';
     //})

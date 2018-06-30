@@ -108,7 +108,26 @@ function snapshot() {
             }*/
             
         })
-           //setTimeout(apiResponse, 7000);             
+           //setTimeout(apiResponse, 7000);
+           
+           
+    $.ajax({
+    type: "POST",
+    url: "/api/logo",
+    data: dataSent,
+    success: ((res) => {
+        console.log(res);
+        $('#api-result').text(res.arr1);
+        $('#api-result2').text(res.arr2);
+        if (res.arr3[0] != undefined) {
+            $('#api-result3').text(res.arr3[0].description);
+        } else {
+            $('#api-result3').text("No text result");
+        }
+        $('#snap').show();
+    }),
+    dataType: "json"
+    });       
 }
       
 function apiResponse() {
