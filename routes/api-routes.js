@@ -1,8 +1,13 @@
 let myRequest;
+const path = require("path");
+
 //let myResult = [];
 let myResult = {arr1:[], arr2:[], arr3:[]};
 const vision = require('@google-cloud/vision');
 const client = new vision.ImageAnnotatorClient({ keyFilename: "./apikey.json" });
+
+
+var imageFaceHelper = require("../models/detect.js");
 
 
 module.exports = (app) => {    
@@ -15,6 +20,20 @@ module.exports = (app) => {
     app.get("/api/logo", function(req, res) {             
         console.log("Res2: "+JSON.stringify(myResult))
         return res.json(myResult);
+    }); 
+
+    //This is needed to serve the images
+    app.get("/images/:id",function(req,res)
+    {
+        var name = req.params.id;
+        console.log(name);
+        var npath = path.join(__dirname, '../images/'+name);
+        res.sendFile(npath);
+    });
+
+    //this is needed to get the results of the urls we store in the server
+    app.get("/api/faceUrl", function(req, res) {                 
+        return res.json(imageFaceHelper.detectFaces("./images/imageMain.png")) ;
     }); 
 }
 async function base64() {   
@@ -71,6 +90,8 @@ try
     // Save decoded binary image to disk
     try
     {
+        require('fs').writeFile("./images/imageMain.png", imageBuffer.data,function(){});
+                   
         const prom = new Promise(function(resolve, reject) {
 
         
@@ -80,9 +101,10 @@ try
                 console.log('DEBUG - feed:message: Saved to disk image attached by user:', userUploadedImagePath);                                
                // myVision(uniqueRandomImageName+'.png');    
                 //return uniqueRandomImageName+'.png' 
-                resolve(uniqueRandomImageName+'.png')                             
+                resolve(uniqueRandomImageName+'.png')            
             }); 
         });
+      
         prom.then(function(value) {
             myResult = {arr1:[], arr2:[], arr3:[]}
             myVision(value);
@@ -148,6 +170,7 @@ function myVision2(fileName) {
     console.error('ERROR:', err);
   });
 }
+
 function myVision3(fileName) {
     client
     .logoDetection(fileName)
@@ -160,6 +183,7 @@ function myVision3(fileName) {
         console.error('ERROR:', err);
     });
 }
+
 function myVision4(fileName) {
     client
     .textDetection(fileName)
