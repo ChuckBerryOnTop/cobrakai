@@ -174,4 +174,36 @@ function apiResponse() {
         image.src = 'data:image/png;base64,'+data;
         document.body.appendChild(image);
     });    
-}  
+} 
+
+////// click button for history check it out
+$(".dbHistory").on("click", function(event) {
+    event.preventDefault();
+    $.get("/api/logo", function(data) {
+      if (data.length !== 0) {
+    
+        for (let i = 0; i < data.length; i++) {
+    
+          let image = new Image();
+          image.src = `data:image/png;base64,${data[i].file}`;
+          var div = $("<div style='background:blue;'></div>")
+          var row = $("<div>");
+          row.addClass("lineItem");
+          row.append(div);
+    
+          div.append(`<p>ID ${data[i].id}:<br> Best Guess: ${data[i].name}<br>Description: ${data[i].summary} <br>Labels: ${data[i].labels} <br>Text Read: ${data[i].text}</p>`);
+         // row.append(`<div>ID ${data[i].id}</div><br>`) 
+        /*  .append (`Best Guess: ${data[i].name}<br>`) 
+          .append(`Description: ${data[i].summary}<br>`) 
+          .append(`Labels: ${data[i].labels}<br>`) 
+          .append(`Text Read: ${data[i].text}<br>`)*/
+         
+         // row.append("<p>At " + moment(data[i].created_at).format("h:mma on dddd") + "</p>");
+          $(".history").prepend(row);
+    
+        }
+    
+      }
+    
+    })
+});    
