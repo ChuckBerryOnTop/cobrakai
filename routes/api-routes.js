@@ -25,7 +25,7 @@ module.exports = (app) => {
         // Sequelize queries are asynchronous, which helps with perceived speed.
         // If we want something to be guaranteed to happen after the query, we'll use
         // the .then function
-        db.findAll({}).then(function(results) {
+        db.Classify.findAll({}).then(function(results) {
           // results are available to us inside the .then
           res.json(results);
         });
