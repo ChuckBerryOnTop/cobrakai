@@ -16,5 +16,14 @@
   "bugs": {
     "url": "https://github.com/ChuckBerryOnTop/cobrakai/issues"
   },
-  "homepage": "https://github.com/ChuckBerryOnTop/cobrakai#readme"
+  "homepage": "https://github.com/ChuckBerryOnTop/cobrakai#readme",
+  "dependencies": {
+    "@google-cloud/vision": "^0.20.0",
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "mysql": "^2.15.0",
+    "mysql2": "^1.5.3",
+    "sequelize": "^4.38.0"
+  }
 }
