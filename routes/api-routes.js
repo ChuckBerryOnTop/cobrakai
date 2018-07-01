@@ -3,7 +3,12 @@ let myRequest;
 let myResult = {arr1:[], arr2:[], arr3:[]};
 const vision = require('@google-cloud/vision');
 const client = new vision.ImageAnnotatorClient({ keyFilename: "./VidWall-e4a178d8b757.json" });
+//
+let wiki;
+const axios = require("axios");
+const db = require("../models");
 
+//
 
 module.exports = (app) => {    
     app.post("/api/logo", (req, res) => {    
@@ -33,6 +38,7 @@ module.exports = (app) => {
             myResult.arr1 = await myVision(fileName);
             myResult.arr2 = await myVision2(fileName);
             myResult.arr3 = await myVision4(fileName);
+            create(myResult.arr1[0], myResult.arr1[1], myResult.arr2[0], myResult.arr3[0], fileName)
             console.log("myResult: "+JSON.stringify(myResult));
             res.json(myResult)
         }
@@ -196,7 +202,8 @@ try
 }
 
 function myVision(fileName) {
-   return new Promise((resolve) => {
+    return new Promise((resolve) => {
+        let myArray = [];    
     client
         .webDetection(fileName)
         .then(results => {
@@ -208,11 +215,26 @@ function myVision(fileName) {
                 );
                 webDetection.bestGuessLabels.forEach(label => {
                     console.log(`  Label: ${label.label}`);
+                    myArray.push(label.label);
                     //myResult.arr1.push(label.label);
                     //myResult = label.label;
-                    
+                    //axios api call 
+                    var searchTerm = label.label;
+                    var url2 = `https://en.wikipedia.org/api/rest_v1/page/summary/${searchTerm}`;
+
+                    axios.get(url2)
+                        .then(function (response) {
+                            console.log(response.data.extract);
+                            myArray.push(response.data.extract);
+                            //create(myResult, response.data.extract);
+                        })
+                        .catch(function (error) {
+                            console.log(error);
+                        });
                     //console.log("res1: "+myResult);
-                    resolve(label.label)
+                    //resolve(label.label)
+                    
+                    resolve(myArray);
                     //return label.label
                     //return myResult
                 });        
@@ -272,7 +294,10 @@ function myVision4(fileName) {
         .then(results => {
             const detections = results[0].textAnnotations;
             console.log('Text:');
-            detections.forEach(text => myArray.push(text));  //text => console.log(text) myResult.arr3
+            detections.forEach(text => myArray.push(text.description));  //text => console.log(text) myResult.arr3
+            if (myArray[0] == undefined) {
+                myArray.push("No Text");
+            }
             resolve(myArray);
         })
         .catch(err => {
@@ -326,4 +351,27 @@ function writeBase64() {
         count++;
         return count;
     } */
+}
+
+function create(log1, log2, log3, log4, log5) {
+
+    db.Classify.create({
+
+        name: log1,
+        summary: log2,
+        labels: log3,
+        text: log4,
+        file: log5
+
+    })
+    //    })      .then(function() {
+    //     // We have access to the new todo as an argument inside of the callback function
+    //     res.send("sucess");
+
+    //   })
+    //     .catch(function(err) {
+    //     // Whenever a validation or flag fails, an error is thrown
+    //     // We can "catch" the error to prevent it from being "thrown", which could crash our node app
+    //       res.json(err);
+    //     });
 }

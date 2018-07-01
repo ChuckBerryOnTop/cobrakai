@@ -99,7 +99,7 @@ function snapshot() {
     const dataSent = {
         key: dataURL
     }
-    $.post("/api/logo", dataSent,
+   /* $.post("/api/logo", dataSent,
         function(res) {
             console.log(res)
            /* if (res == 200) {
@@ -107,7 +107,7 @@ function snapshot() {
                 setTimeout(apiResponse, 5000)
             }*/
             
-        })
+        //})
            //setTimeout(apiResponse, 7000);
            
            
@@ -119,11 +119,13 @@ function snapshot() {
         console.log(res);
         $('#api-result').text(res.arr1);
         $('#api-result2').text(res.arr2);
-        if (res.arr3[0] != undefined) {
+        $('#api-result3').text(res.arr3);
+        
+       /* if (res.arr3[0] != undefined) {
             $('#api-result3').text(res.arr3[0].description);
         } else {
             $('#api-result3').text("No text result");
-        }
+        }*/
         $('#snap').show();
     }),
     dataType: "json"
@@ -136,11 +138,13 @@ function apiResponse() {
         console.log(data)
         $('#api-result').text(data.arr1);
         $('#api-result2').text(data.arr2);
-        if (data.arr3[0] != undefined) {
-            $('#api-result3').text(data.arr3[0].description);
+        $('#api-result3').text(data.arr3);
+        
+      /*  if (data.arr3[0] != undefined) {
+            $('#api-result3').text(data.arr3[0]);
         } else {
             $('#api-result3').text("No text result");
-        }
+        }*/
     });
     $('#snap').show();
 

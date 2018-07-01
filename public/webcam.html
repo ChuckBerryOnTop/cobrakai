@@ -21,7 +21,7 @@
     }
     
   #myCanvas, #snap {
-    display: none;
+    display: none; 
   }
   #videoElement {
     display: block;
@@ -77,31 +77,31 @@
 
 <button id="cam" onclick="startCam()" button type="button" class="btn btn-dark">Camera</button>
 
-<button id="close" onclick="closeCam()" button type="button" class="btn btn-dark">Close</button>
+<button id="close" onclick="close()" button type="button" class="btn btn-dark">Close</button>
 
 
 </div>
 
   
 <div class="container text-center">    
-  <h3><p id="api-result">*RESULT*</p></h3><br>
+  <h3><p id='api-result'>*LABELS APPEAR HERE*</p></h3><br>
   <div class="row">
-    <div class="col-sm-4">
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-      <p id="api-result2">Car deals</p>
+    <div class="col-md-3">
+      <p id="api-result2">box 1</p>
     </div>
-    <div class="col-sm-4"> 
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-      <p id="api-result3">More car deals</p>    
+    <div class="col-md-3">
+      <p id="api-result3">box 2</p>
     </div>
-    <div class="col-sm-4">
-      <div class="well">
-       <p id="img">specs</p>
-      </div>
-      <div class="well">
-       <p>specs</p>
-      </div>
+    <div class="col-md-3">
+      <p>box 3</p>
     </div>
+    <div class="col-md-3">
+      <p>box 4</p>
+    </div>
+  </div>
+  <div class="history row">
+    <p>History Goes Here</p>
+    <button type="button" class="btn btn-primary btn-lg btn-block dbHistory">Block level button</button>
   </div>
 </div><br>
 
@@ -109,10 +109,6 @@
   <p>Footer Text</p>
 </footer>
 
-  
-
-<script src="./js/webcam.js" type="text/javascript"></script>
-
-
+<script src='./js/webcam.js'></script>   
 </body>
 </html>
