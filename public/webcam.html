@@ -21,7 +21,7 @@
     }
     
   #myCanvas {
-    display: none; 
+    display: none;
   }
   #videoElement {
     display: block;
@@ -35,7 +35,29 @@
     margin-right: auto;
     width: 40%;
   }
+
+  #photos {
+  /* Prevent vertical gaps */
+  line-height: 0;
+   
+  -webkit-column-count: 5;
+  -webkit-column-gap:   0px;
+  -moz-column-count:    5;
+  -moz-column-gap:      0px;
+  column-count:         5;
+  column-gap:           0px;  
+  width: auto;
+
+}
+
+#photos img {
+  /* Just in case there are inline attributes */
+  width: 100%!important;
+  height: auto !important;
+}
  
+
+
   </style>
 </head>
 <body>
@@ -87,13 +109,16 @@
   <h3><p id='api-result'>*LABELS APPEAR HERE*</p></h3><br>
   <div class="row">
     <div class="col-md-3">
-      <p>box 1</p>
+      <p id="api-result2">box 1</p>
     </div>
     <div class="col-md-3">
-      <p>box 2</p>
+      <p id="api-result3">box 2</p>
     </div>
-    <div class="col-md-3">
-      <p>box 3</p>
+    <div class="col-sm-4">
+      <h4 id="faceTag"></h4>
+      <section id="photos" >
+        
+      </section>
     </div>
     <div class="col-md-3">
       <p>box 4</p>
