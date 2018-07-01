@@ -23,8 +23,14 @@ module.exports = (app) => {
             arr2: [],
             arr3: []
         }
-        
-        async function callVis(fileName) {
+
+       const imgFix1 = myRequest.replace(/data:image\/png;base64,/gi, "")
+       let img1 = new Buffer(imgFix1, 'base64');
+       require('fs').writeFile("./images/imageMain.png", img1, function () {
+
+         })
+       
+       async function callVis(fileName) {
             myResult.arr1 = await myVision(fileName);
             myResult.arr2 = await myVision2(fileName);
             myResult.arr3 = await myVision4(fileName);
@@ -37,6 +43,8 @@ module.exports = (app) => {
             const imgFix = myRequest.replace(/data:image\/png;base64,/gi, "")
             let img = new Buffer(imgFix, 'base64');
             const fileName = 'a-img' + rnd() + rnd() + rnd();
+
+
             require('fs').writeFile("./" + fileName + '.png', img, function () {
                 console.log('FILE SAVED AS: ' + fileName + '.png');
                 resolve(fileName + '.png');
