@@ -84,34 +84,96 @@ function init() {
   ctx = canvas.getContext('2d');
 }
 
-function snapshot() {
-  $('#snap').hide();
+// function snapshot() {
+//   $('#snap').hide();
 
+//   canvas = document.getElementById("myCanvas");
+//   ctx = canvas.getContext('2d');
+//   ctx.drawImage(vid, 0, 0, canvas.width, canvas.height);
+//   dataURL = canvas.toDataURL('image/png');
+//   //console.log(dataURL);
+//   const dataSent = {
+//     key: dataURL
+//   }
+//   $.post("/api/logo", dataSent,
+//     function (data, status) {
+
+//     })
+//   setTimeout(apiResponse, 5000);
+//   function apiResponse() {
+//     $.get("/api/logo", function (data) {
+//       console.log("res");
+//       console.log(data)
+//       $('#api-result').text(data.arr1);
+//       $('#api-result2').text(data.arr2);
+
+//     }).then(function () {
+//       $.get("/api/faceUrl", function (data) {
+//         let response = JSON.parse(data);
+//         console.log(response);
+//         let count = response.faceCount;
+//         console.log(count);
+//         let img = response.imgUrls;
+//         console.log(img);
+//         $('#photos').text("");
+//         if (count > 0) {
+//           $('#faceTag').text('Face '+count+' Detected');
+//           for (var ii = 0; ii < count; ii++) {
+//             var arr = response.imgUrls;
+//             console.log(arr[ii]);
+//             displayImageFaces(arr[ii], 1);
+//           }
+//         }
+//         else{
+//           $('#faceTag').text('No Face Detected');
+//         }
+//       });
+
+//     });
+//   }
+//   $('#snap').show();
+// }
+
+
+function snapshot() { 
+  $('#snap').hide();   
+    
   canvas = document.getElementById("myCanvas");
-  ctx = canvas.getContext('2d');
-  ctx.drawImage(vid, 0, 0, canvas.width, canvas.height);
-  dataURL = canvas.toDataURL('image/png');
+  ctx = canvas.getContext('2d'); 
+  ctx.drawImage(vid, 0,0, canvas.width, canvas.height);        
+  dataURL = canvas.toDataURL('image/png');    
   //console.log(dataURL);
-  const dataSent = {
-    key: dataURL
-  }
-  $.post("/api/logo", dataSent,
-    function (data, status) {
+  
+  /*const imgFix = dataURL.replace(/data:image\/png;base64,/gi, "")
+  console.log("f "+imgFix)
+  const matches = dataURL.match(/^data:([A-Za-z-+\/]+);base64,(.+)$/);
+  console.log("m "+matches[0]);*/
 
-    })
-  setTimeout(apiResponse, 5000);
-  function apiResponse() {
-    $.get("/api/logo", function (data) {
-      console.log("res");
-      console.log(data)
-      $('#api-result').text(data.arr1);
-      $('#api-result2').text(data.arr2);
-      if (data.arr3[0] != undefined) {
-        $('#api-result3').text(data.arr3[0].description);
-      } else {
-        $('#api-result3').text("No text result");
-      }
-    }).then(function () {
+  const dataSent = {
+      key: dataURL
+  }
+ /* $.post("/api/logo", dataSent,
+      function(res) {
+          console.log(res)
+         /* if (res == 200) {
+              //apiResponse()
+              setTimeout(apiResponse, 5000)
+          }*/
+          
+      //})
+         //setTimeout(apiResponse, 7000);
+         
+         
+  $.ajax({
+  type: "POST",
+  url: "/api/logo",
+  data: dataSent,
+  success: ((res) => {
+      console.log(res);
+      $('#api-result').text(res.arr1);
+      $('#api-result2').text(res.arr2);
+      $('#api-result3').text(res.arr3);
+      
       $.get("/api/faceUrl", function (data) {
         let response = JSON.parse(data);
         console.log(response);
@@ -132,10 +194,10 @@ function snapshot() {
           $('#faceTag').text('No Face Detected');
         }
       });
-
-    });
-  }
-  $('#snap').show();
+      $('#snap').show();
+  }),
+  dataType: "json"
+  });       
 }
 
 
