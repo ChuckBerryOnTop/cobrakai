@@ -134,8 +134,8 @@ function snapshot() {
         $('#photos').text("");
         if (count > 0) {
           $('#faceTag').text('Face '+count+' Detected');
+          let arr = response.imgUrls;
           for (var ii = 0; ii < count; ii++) {
-            var arr = response.imgUrls;
             console.log(arr[ii]);
             displayImageFaces(arr[ii], 1);
           }
