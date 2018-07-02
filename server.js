@@ -20,7 +20,7 @@ var options = {
   };
 
 var https = require('https');
-https.createServer(options, app).listen(443);
+https.createServer(options, app);
 
 
 // Requiring our models for syncing
