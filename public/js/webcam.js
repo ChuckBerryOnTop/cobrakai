@@ -160,11 +160,6 @@ function apiResponse() {
         $('#api-result2').text(data.arr2);
         $('#api-result3').text(data.arr3);
         
-      /*  if (data.arr3[0] != undefined) {
-            $('#api-result3').text(data.arr3[0]);
-        } else {
-            $('#api-result3').text("No text result");
-        }*/
     });
     $('#snap').show();
 
