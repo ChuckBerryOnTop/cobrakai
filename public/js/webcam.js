@@ -58,7 +58,7 @@ function startCam() {
 
 function closeCam() {
   console.log('close');
-  let stream = vid.srcObject;
+  //let stream = vid.srcObject;
   let tracks = stream.getTracks();
     console.log('close');
     $('#snap').hide();  
