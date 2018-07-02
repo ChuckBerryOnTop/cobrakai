@@ -158,7 +158,7 @@ function displayImageFaces(fileSourceURL, count = 0) {
   for (var i = 0; i < count; i++) {
     var width = getRandomSize(200, 400);
     var height = getRandomSize(200, 400);
-    $('#photos').append('<img src="' + fileSourceURL + '" alt="">');
+    $('#photos').append('<img src="' + fileSourceURL + '?'+ new Date().getTime()+'" alt="">');
     $("#photos").css("background-color", "yellow");
     $("#photos").css("outline", "5px dotted green");
   }
