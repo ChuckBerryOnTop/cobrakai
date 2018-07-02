@@ -14,6 +14,7 @@
     .navbar {
       margin-bottom: 0;
       border-radius: 0;
+      height: 120px;
     }
 
     /* Add a gray background color and some padding to the footer */
@@ -60,47 +61,35 @@
       width: 100%!important;
       height: auto !important;
     }
+
+.navbar-brand
+{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    text-align: center;
+    margin: auto;
+    padding:0px;
+}
+
+.navbar-toggle {
+    z-index:1;
+}
   </style>
 </head>
 
 <body>
 
-  <nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">Logo</a>
-      </div>
-      <div class="collapse navbar-collapse" id="myNavbar">
-        <ul class="nav navbar-nav">
-          <li class="active">
-            <a href="#">Home</a>
-          </li>
-          <li>
-            <a href="#">About</a>
-          </li>
-          <li>
-            <a href="#">Projects</a>
-          </li>
-          <li>
-            <a href="#">Contact</a>
-          </li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li>
-            <a href="#">
-              <span class="glyphicon glyphicon-log-in"></span> Login</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-
+    <nav class="navbar navbar-default" role="navigation">
+    	  <div class="container">
+		      <div class="navbar-brand navbar-brand-centered">
+              <a href="./webcam.html"><img id="logo-main" src="./images/logo.png" width="200" alt="CobraKai"></a>
+          </div>
+		    </div>
+		  </div><!-- /.container-fluid -->
+    </nav>
+    
   <div class="jumbotron jumbotron-fluid">
     <div id="container">
       <video autoplay="true" id="videoElement">
@@ -132,8 +121,9 @@
     </div>
     <div class="row">
       <div class="col-sm-12">
+        <h4 id="faceTag"></h4>
         <section id="photos">
-          <h4 id="faceTag"></h4>
+          
         </section>
       </div>
     </div>
