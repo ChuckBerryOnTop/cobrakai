@@ -1,0 +1,904 @@
+2018-07-01T23:16:12.972635+00:00 app[api]: Release v2 created by user dan.kubiak@gmail.com
+2018-07-01T23:16:12.705359+00:00 app[api]: Initial release by user dan.kubiak@gmail.com
+2018-07-01T23:16:12.972635+00:00 app[api]: Enable Logplex by user dan.kubiak@gmail.com
+2018-07-01T23:16:12.705359+00:00 app[api]: Release v1 created by user dan.kubiak@gmail.com
+2018-07-01T23:19:07.000000+00:00 app[api]: Build started by user dan.kubiak@gmail.com
+2018-07-01T23:19:31.461625+00:00 app[api]: Release v3 created by user dan.kubiak@gmail.com
+2018-07-01T23:19:31.461625+00:00 app[api]: Deploy fed2d656 by user dan.kubiak@gmail.com
+2018-07-01T23:19:31.485581+00:00 app[api]: Scaled to web@1:Free by user dan.kubiak@gmail.com
+2018-07-01T23:19:35.000000+00:00 app[api]: Build succeeded
+2018-07-01T23:19:38.356058+00:00 heroku[web.1]: Starting process with command `npm start`
+2018-07-01T23:19:41.644520+00:00 app[web.1]: 
+2018-07-01T23:19:41.644542+00:00 app[web.1]: > cobrakai@1.0.0 start /app
+2018-07-01T23:19:41.644544+00:00 app[web.1]: > node server.js
+2018-07-01T23:19:41.644545+00:00 app[web.1]: 
+2018-07-01T23:19:42.642772+00:00 app[web.1]: Directory Name /app/models
+2018-07-01T23:19:43.978451+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-01T23:19:43.978586+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+2018-07-01T23:19:43.978715+00:00 app[web.1]: (node:20) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+2018-07-01T23:19:43.978785+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-01T23:19:43.978936+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)
+2018-07-01T23:19:43.978939+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-01T23:19:43.979111+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 3)
+2018-07-01T23:19:43.979114+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-01T23:19:43.979184+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 4)
+2018-07-01T23:19:43.979253+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-01T23:19:43.979319+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 5)
+2018-07-01T23:19:43.979384+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-01T23:19:43.979450+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 6)
+2018-07-01T23:19:44.008348+00:00 app[web.1]: Unhandled rejection SequelizeConnectionRefusedError: connect ECONNREFUSED 127.0.0.1:3306
+2018-07-01T23:19:44.008367+00:00 app[web.1]: at Utils.Promise.tap.then.catch.err (/app/node_modules/sequelize/lib/dialects/mysql/connection-manager.js:139:19)
+2018-07-01T23:19:44.008371+00:00 app[web.1]: at tryCatcher (/app/node_modules/bluebird/js/release/util.js:16:23)
+2018-07-01T23:19:44.008375+00:00 app[web.1]: at Promise._settlePromiseFromHandler (/app/node_modules/bluebird/js/release/promise.js:512:31)
+2018-07-01T23:19:44.008378+00:00 app[web.1]: at Promise._settlePromise (/app/node_modules/bluebird/js/release/promise.js:569:18)
+2018-07-01T23:19:44.008379+00:00 app[web.1]: at Promise._settlePromise0 (/app/node_modules/bluebird/js/release/promise.js:614:10)
+2018-07-01T23:19:44.008381+00:00 app[web.1]: at Promise._settlePromises (/app/node_modules/bluebird/js/release/promise.js:689:18)
+2018-07-01T23:19:44.008383+00:00 app[web.1]: at Async._drainQueue (/app/node_modules/bluebird/js/release/async.js:133:16)
+2018-07-01T23:19:44.008384+00:00 app[web.1]: at Async._drainQueues (/app/node_modules/bluebird/js/release/async.js:143:10)
+2018-07-01T23:19:44.008386+00:00 app[web.1]: at Immediate.Async.drainQueues (/app/node_modules/bluebird/js/release/async.js:17:14)
+2018-07-01T23:19:44.008388+00:00 app[web.1]: at runCallback (timers.js:810:20)
+2018-07-01T23:19:44.008389+00:00 app[web.1]: at tryOnImmediate (timers.js:768:5)
+2018-07-01T23:19:44.008392+00:00 app[web.1]: at processImmediate [as _immediateCallback] (timers.js:745:5)
+2018-07-01T23:19:54.087352+00:00 heroku[web.1]: State changed from starting to crashed
+2018-07-01T23:19:54.088999+00:00 heroku[web.1]: State changed from crashed to starting
+2018-07-01T23:19:54.066411+00:00 heroku[web.1]: Process exited with status 0
+2018-07-01T23:19:58.298190+00:00 heroku[web.1]: Starting process with command `npm start`
+2018-07-01T23:20:00.131735+00:00 app[web.1]: > cobrakai@1.0.0 start /app
+2018-07-01T23:20:00.131705+00:00 app[web.1]: 
+2018-07-01T23:20:00.131737+00:00 app[web.1]: > node server.js
+2018-07-01T23:20:00.131738+00:00 app[web.1]: 
+2018-07-01T23:20:00.616802+00:00 app[web.1]: Directory Name /app/models
+2018-07-01T23:20:01.338007+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-01T23:20:01.338094+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+2018-07-01T23:20:01.338159+00:00 app[web.1]: (node:20) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+2018-07-01T23:20:01.338215+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-01T23:20:01.338281+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)
+2018-07-01T23:20:01.338332+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-01T23:20:01.338393+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 3)
+2018-07-01T23:20:01.338439+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-01T23:20:01.338499+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 4)
+2018-07-01T23:20:01.338593+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 5)
+2018-07-01T23:20:01.338543+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-01T23:20:01.338637+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-01T23:20:01.338711+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 6)
+2018-07-01T23:20:01.355420+00:00 app[web.1]: at Utils.Promise.tap.then.catch.err (/app/node_modules/sequelize/lib/dialects/mysql/connection-manager.js:139:19)
+2018-07-01T23:20:01.355422+00:00 app[web.1]: at tryCatcher (/app/node_modules/bluebird/js/release/util.js:16:23)
+2018-07-01T23:20:01.355427+00:00 app[web.1]: at Promise._settlePromiseFromHandler (/app/node_modules/bluebird/js/release/promise.js:512:31)
+2018-07-01T23:20:01.355416+00:00 app[web.1]: Unhandled rejection SequelizeConnectionRefusedError: connect ECONNREFUSED 127.0.0.1:3306
+2018-07-01T23:20:01.355429+00:00 app[web.1]: at Promise._settlePromise (/app/node_modules/bluebird/js/release/promise.js:569:18)
+2018-07-01T23:20:01.355430+00:00 app[web.1]: at Promise._settlePromise0 (/app/node_modules/bluebird/js/release/promise.js:614:10)
+2018-07-01T23:20:01.355432+00:00 app[web.1]: at Promise._settlePromises (/app/node_modules/bluebird/js/release/promise.js:689:18)
+2018-07-01T23:20:01.355433+00:00 app[web.1]: at Async._drainQueue (/app/node_modules/bluebird/js/release/async.js:133:16)
+2018-07-01T23:20:01.355435+00:00 app[web.1]: at Async._drainQueues (/app/node_modules/bluebird/js/release/async.js:143:10)
+2018-07-01T23:20:01.355436+00:00 app[web.1]: at Immediate.Async.drainQueues (/app/node_modules/bluebird/js/release/async.js:17:14)
+2018-07-01T23:20:01.355440+00:00 app[web.1]: at tryOnImmediate (timers.js:768:5)
+2018-07-01T23:20:01.355438+00:00 app[web.1]: at runCallback (timers.js:810:20)
+2018-07-01T23:20:01.355441+00:00 app[web.1]: at processImmediate [as _immediateCallback] (timers.js:745:5)
+2018-07-01T23:20:11.406883+00:00 heroku[web.1]: Process exited with status 0
+2018-07-01T23:20:11.839340+00:00 heroku[web.1]: State changed from starting to crashed
+2018-07-01T23:20:12.460008+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=face-detection6969.herokuapp.com request_id=3ab6ecbd-e2c8-450e-8b31-092ac05bb6a8 fwd="76.89.239.212" dyno= connect= service= status=503 bytes= protocol=https
+2018-07-01T23:20:13.294975+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=face-detection6969.herokuapp.com request_id=c16d79a1-3209-44d5-9028-39f49cd3d246 fwd="76.89.239.212" dyno= connect= service= status=503 bytes= protocol=https
+2018-07-01T23:20:33.177444+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/webcam.html" host=face-detection6969.herokuapp.com request_id=29671989-d257-4a99-979c-26e115dc0365 fwd="76.89.239.212" dyno= connect= service= status=503 bytes= protocol=https
+2018-07-01T23:20:33.675457+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=face-detection6969.herokuapp.com request_id=279b9ace-9dc7-4cec-80e1-3260254d250b fwd="76.89.239.212" dyno= connect= service= status=503 bytes= protocol=https
+2018-07-01T23:21:04.289072+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=face-detection6969.herokuapp.com request_id=900a55d4-650e-41ba-bfb2-91d41a8066d1 fwd="76.89.239.212" dyno= connect= service= status=503 bytes= protocol=https
+2018-07-01T23:21:04.698038+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=face-detection6969.herokuapp.com request_id=109e0108-e7fc-476d-9155-ff504473c249 fwd="76.89.239.212" dyno= connect= service= status=503 bytes= protocol=https
+2018-07-01T23:21:40.477452+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=face-detection6969.herokuapp.com request_id=5600825d-cf7c-4309-9ddf-a5939fc8e07d fwd="76.89.239.212" dyno= connect= service= status=503 bytes= protocol=https
+2018-07-01T23:21:40.992719+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=face-detection6969.herokuapp.com request_id=91bf2e07-18c9-4699-bd5d-c77df59321b7 fwd="76.89.239.212" dyno= connect= service= status=503 bytes= protocol=https
+2018-07-01T23:21:42.756440+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=face-detection6969.herokuapp.com request_id=c470c08b-0f9a-4013-a927-b1522609da08 fwd="76.89.239.212" dyno= connect= service= status=503 bytes= protocol=https
+2018-07-01T23:21:43.193978+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=face-detection6969.herokuapp.com request_id=089baae3-523a-4db8-91c4-ce8e33cdf6e9 fwd="76.89.239.212" dyno= connect= service= status=503 bytes= protocol=https
+2018-07-01T23:28:47.000000+00:00 app[api]: Build started by user dan.kubiak@gmail.com
+2018-07-01T23:29:02.184152+00:00 heroku[web.1]: State changed from crashed to starting
+2018-07-01T23:29:02.014480+00:00 app[api]: Deploy 1a71b3bd by user dan.kubiak@gmail.com
+2018-07-01T23:29:02.014480+00:00 app[api]: Release v4 created by user dan.kubiak@gmail.com
+2018-07-01T23:29:02.000000+00:00 app[api]: Build succeeded
+2018-07-01T23:29:04.010262+00:00 heroku[web.1]: Starting process with command `npm start`
+2018-07-01T23:29:07.441580+00:00 heroku[web.1]: Process exited with status 0
+2018-07-01T23:29:07.453468+00:00 heroku[web.1]: State changed from starting to crashed
+2018-07-01T23:29:07.192636+00:00 app[web.1]: 
+2018-07-01T23:29:07.192672+00:00 app[web.1]: > cobrakai@1.0.0 start /app
+2018-07-01T23:29:07.192674+00:00 app[web.1]: > node server.js
+2018-07-01T23:29:07.192675+00:00 app[web.1]: 
+2018-07-01T23:29:12.355666+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=face-detection6969.herokuapp.com request_id=fefd710b-bae8-4fcf-be65-341c14aec708 fwd="76.89.239.212" dyno= connect= service= status=503 bytes= protocol=https
+2018-07-01T23:29:12.856989+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=face-detection6969.herokuapp.com request_id=f0a7a9b0-cc73-4465-9dd7-a3f47975cd38 fwd="76.89.239.212" dyno= connect= service= status=503 bytes= protocol=https
+2018-07-01T23:29:15.690006+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=face-detection6969.herokuapp.com request_id=b4170818-4666-4504-9f39-5f865f08dd10 fwd="76.89.239.212" dyno= connect= service= status=503 bytes= protocol=https
+2018-07-01T23:29:16.176913+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=face-detection6969.herokuapp.com request_id=7926d809-2dc0-4205-ac73-7a8094ab5b3f fwd="76.89.239.212" dyno= connect= service= status=503 bytes= protocol=https
+2018-07-01T23:29:16.957969+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=face-detection6969.herokuapp.com request_id=132032ec-7c7f-49e8-b340-d052913cf5df fwd="76.89.239.212" dyno= connect= service= status=503 bytes= protocol=https
+2018-07-01T23:29:17.468924+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=face-detection6969.herokuapp.com request_id=1fcb93f2-8444-48a5-946a-137759964a17 fwd="76.89.239.212" dyno= connect= service= status=503 bytes= protocol=https
+2018-07-01T23:34:33.578594+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=face-detection6969.herokuapp.com request_id=387a85f9-3d88-4c7a-aeff-20ea3e3247d8 fwd="76.89.239.212" dyno= connect= service= status=503 bytes= protocol=https
+2018-07-01T23:34:34.022948+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=face-detection6969.herokuapp.com request_id=2a9c11de-f8bb-44e8-8019-2859ef68244f fwd="76.89.239.212" dyno= connect= service= status=503 bytes= protocol=https
+2018-07-01T23:40:44.767941+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=face-detection6969.herokuapp.com request_id=d34067a0-8bb5-4bfd-8fc8-ee77d433a7f8 fwd="76.89.239.212" dyno= connect= service= status=503 bytes= protocol=https
+2018-07-01T23:41:17.459475+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=face-detection6969.herokuapp.com request_id=5257f8ee-d500-4e0b-9ea5-4d3382787c0e fwd="76.89.239.212" dyno= connect= service= status=503 bytes= protocol=https
+2018-07-01T23:41:18.013562+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=face-detection6969.herokuapp.com request_id=fdfdf524-36fa-4361-beb5-0e42de2e9241 fwd="76.89.239.212" dyno= connect= service= status=503 bytes= protocol=https
+2018-07-01T23:52:55.332167+00:00 heroku[web.1]: State changed from crashed to starting
+2018-07-01T23:52:57.284769+00:00 heroku[web.1]: Starting process with command `npm start`
+2018-07-01T23:53:00.450617+00:00 heroku[web.1]: Process exited with status 0
+2018-07-01T23:53:00.233085+00:00 app[web.1]: 
+2018-07-01T23:53:00.233109+00:00 app[web.1]: > cobrakai@1.0.0 start /app
+2018-07-01T23:53:00.233111+00:00 app[web.1]: > node server.js
+2018-07-01T23:53:00.233113+00:00 app[web.1]: 
+2018-07-01T23:53:00.467424+00:00 heroku[web.1]: State changed from starting to crashed
+2018-07-02T00:03:33.438331+00:00 heroku[web.1]: State changed from crashed to starting
+2018-07-02T00:03:35.136878+00:00 heroku[web.1]: Starting process with command `npm start`
+2018-07-02T00:03:37.368666+00:00 heroku[web.1]: Process exited with status 0
+2018-07-02T00:03:37.095722+00:00 app[web.1]: 
+2018-07-02T00:03:37.095768+00:00 app[web.1]: > cobrakai@1.0.0 start /app
+2018-07-02T00:03:37.095770+00:00 app[web.1]: > node server.js
+2018-07-02T00:03:37.095772+00:00 app[web.1]: 
+2018-07-02T00:03:37.442645+00:00 heroku[web.1]: State changed from starting to crashed
+2018-07-02T00:03:45.003112+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=face-detection6969.herokuapp.com request_id=d4429976-1731-4561-9c4d-f20d8fe0dc77 fwd="76.89.239.212" dyno= connect= service= status=503 bytes= protocol=https
+2018-07-02T00:03:46.047321+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=face-detection6969.herokuapp.com request_id=df42dd00-021d-4583-9f02-19d7c66fec06 fwd="76.89.239.212" dyno= connect= service= status=503 bytes= protocol=https
+2018-07-02T00:05:00.177683+00:00 app[api]: Starting process with command `rake db:migrate` by user dan.kubiak@gmail.com
+2018-07-02T00:05:03.342517+00:00 heroku[run.1420]: Awaiting client
+2018-07-02T00:05:03.411556+00:00 heroku[run.1420]: Starting process with command `rake db:migrate`
+2018-07-02T00:05:03.536246+00:00 heroku[run.1420]: State changed from starting to up
+2018-07-02T00:05:08.519387+00:00 heroku[run.1420]: State changed from up to complete
+2018-07-02T00:05:08.496794+00:00 heroku[run.1420]: Process exited with status 1
+2018-07-02T00:09:58.017939+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=face-detection6969.herokuapp.com request_id=c60df08d-b451-4821-bcf6-7684e9dcc783 fwd="76.89.239.212" dyno= connect= service= status=503 bytes= protocol=https
+2018-07-02T00:09:58.597849+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=face-detection6969.herokuapp.com request_id=9c75a01f-6334-4ee0-bf6b-76b81c7b9733 fwd="76.89.239.212" dyno= connect= service= status=503 bytes= protocol=https
+2018-07-02T00:13:17.000000+00:00 app[api]: Build started by user dan.kubiak@gmail.com
+2018-07-02T00:13:40.456872+00:00 heroku[web.1]: State changed from crashed to starting
+2018-07-02T00:13:40.233021+00:00 app[api]: Deploy 7698a18c by user dan.kubiak@gmail.com
+2018-07-02T00:13:40.233021+00:00 app[api]: Release v5 created by user dan.kubiak@gmail.com
+2018-07-02T00:13:44.000000+00:00 app[api]: Build succeeded
+2018-07-02T00:13:47.019713+00:00 heroku[web.1]: Starting process with command `npm start`
+2018-07-02T00:13:50.110752+00:00 app[web.1]: 
+2018-07-02T00:13:50.110777+00:00 app[web.1]: > cobrakai@1.0.0 start /app
+2018-07-02T00:13:50.110779+00:00 app[web.1]: > node server.js
+2018-07-02T00:13:50.110780+00:00 app[web.1]: 
+2018-07-02T00:13:51.075484+00:00 app[web.1]: Directory Name /app/models
+2018-07-02T00:13:52.746795+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+2018-07-02T00:13:52.746629+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T00:13:52.746892+00:00 app[web.1]: (node:20) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+2018-07-02T00:13:52.746973+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T00:13:52.747079+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)
+2018-07-02T00:13:52.747246+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 3)
+2018-07-02T00:13:52.747416+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 4)
+2018-07-02T00:13:52.747314+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T00:13:52.747146+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T00:13:52.747493+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T00:13:52.747571+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 5)
+2018-07-02T00:13:52.747638+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T00:13:52.747714+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 6)
+2018-07-02T00:13:52.797589+00:00 app[web.1]: Unhandled rejection SequelizeConnectionRefusedError: connect ECONNREFUSED 127.0.0.1:3306
+2018-07-02T00:13:52.797593+00:00 app[web.1]: at Utils.Promise.tap.then.catch.err (/app/node_modules/sequelize/lib/dialects/mysql/connection-manager.js:139:19)
+2018-07-02T00:13:52.797598+00:00 app[web.1]: at tryCatcher (/app/node_modules/bluebird/js/release/util.js:16:23)
+2018-07-02T00:13:52.797600+00:00 app[web.1]: at Promise._settlePromiseFromHandler (/app/node_modules/bluebird/js/release/promise.js:512:31)
+2018-07-02T00:13:52.797602+00:00 app[web.1]: at Promise._settlePromise (/app/node_modules/bluebird/js/release/promise.js:569:18)
+2018-07-02T00:13:52.797603+00:00 app[web.1]: at Promise._settlePromise0 (/app/node_modules/bluebird/js/release/promise.js:614:10)
+2018-07-02T00:13:52.797605+00:00 app[web.1]: at Promise._settlePromises (/app/node_modules/bluebird/js/release/promise.js:689:18)
+2018-07-02T00:13:52.797607+00:00 app[web.1]: at Async._drainQueue (/app/node_modules/bluebird/js/release/async.js:133:16)
+2018-07-02T00:13:52.797608+00:00 app[web.1]: at Async._drainQueues (/app/node_modules/bluebird/js/release/async.js:143:10)
+2018-07-02T00:13:52.797610+00:00 app[web.1]: at Immediate.Async.drainQueues (/app/node_modules/bluebird/js/release/async.js:17:14)
+2018-07-02T00:13:52.797612+00:00 app[web.1]: at runCallback (timers.js:810:20)
+2018-07-02T00:13:52.797614+00:00 app[web.1]: at tryOnImmediate (timers.js:768:5)
+2018-07-02T00:13:52.797615+00:00 app[web.1]: at processImmediate [as _immediateCallback] (timers.js:745:5)
+2018-07-02T00:14:02.932358+00:00 heroku[web.1]: State changed from starting to crashed
+2018-07-02T00:14:02.936935+00:00 heroku[web.1]: State changed from crashed to starting
+2018-07-02T00:14:02.905733+00:00 heroku[web.1]: Process exited with status 0
+2018-07-02T00:14:11.577660+00:00 heroku[web.1]: Starting process with command `npm start`
+2018-07-02T00:14:13.792003+00:00 app[web.1]: 
+2018-07-02T00:14:13.792041+00:00 app[web.1]: > cobrakai@1.0.0 start /app
+2018-07-02T00:14:13.792043+00:00 app[web.1]: > node server.js
+2018-07-02T00:14:13.792045+00:00 app[web.1]: 
+2018-07-02T00:14:14.318220+00:00 app[web.1]: Directory Name /app/models
+2018-07-02T00:14:15.477694+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T00:14:15.477901+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+2018-07-02T00:14:15.478005+00:00 app[web.1]: (node:20) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+2018-07-02T00:14:15.478092+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T00:14:15.478211+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)
+2018-07-02T00:14:15.478290+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T00:14:15.478417+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 3)
+2018-07-02T00:14:15.478494+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T00:14:15.478603+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 4)
+2018-07-02T00:14:15.478679+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T00:14:15.478760+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 5)
+2018-07-02T00:14:15.478844+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T00:14:15.478934+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 6)
+2018-07-02T00:14:15.507234+00:00 app[web.1]: Unhandled rejection SequelizeConnectionRefusedError: connect ECONNREFUSED 127.0.0.1:3306
+2018-07-02T00:14:15.507238+00:00 app[web.1]: at Utils.Promise.tap.then.catch.err (/app/node_modules/sequelize/lib/dialects/mysql/connection-manager.js:139:19)
+2018-07-02T00:14:15.507240+00:00 app[web.1]: at tryCatcher (/app/node_modules/bluebird/js/release/util.js:16:23)
+2018-07-02T00:14:15.507242+00:00 app[web.1]: at Promise._settlePromiseFromHandler (/app/node_modules/bluebird/js/release/promise.js:512:31)
+2018-07-02T00:14:15.507244+00:00 app[web.1]: at Promise._settlePromise (/app/node_modules/bluebird/js/release/promise.js:569:18)
+2018-07-02T00:14:15.507245+00:00 app[web.1]: at Promise._settlePromise0 (/app/node_modules/bluebird/js/release/promise.js:614:10)
+2018-07-02T00:14:15.507247+00:00 app[web.1]: at Promise._settlePromises (/app/node_modules/bluebird/js/release/promise.js:689:18)
+2018-07-02T00:14:15.507249+00:00 app[web.1]: at Async._drainQueue (/app/node_modules/bluebird/js/release/async.js:133:16)
+2018-07-02T00:14:15.507250+00:00 app[web.1]: at Async._drainQueues (/app/node_modules/bluebird/js/release/async.js:143:10)
+2018-07-02T00:14:15.507252+00:00 app[web.1]: at Immediate.Async.drainQueues (/app/node_modules/bluebird/js/release/async.js:17:14)
+2018-07-02T00:14:15.507254+00:00 app[web.1]: at runCallback (timers.js:810:20)
+2018-07-02T00:14:15.507256+00:00 app[web.1]: at tryOnImmediate (timers.js:768:5)
+2018-07-02T00:14:15.507257+00:00 app[web.1]: at processImmediate [as _immediateCallback] (timers.js:745:5)
+2018-07-02T00:14:25.591442+00:00 heroku[web.1]: State changed from starting to crashed
+2018-07-02T00:14:25.574735+00:00 heroku[web.1]: Process exited with status 0
+2018-07-02T00:14:29.066054+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=face-detection6969.herokuapp.com request_id=62e5d22b-c491-4da9-9f30-871dd362d036 fwd="76.89.239.212" dyno= connect= service= status=503 bytes= protocol=https
+2018-07-02T00:14:29.797854+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=face-detection6969.herokuapp.com request_id=84005707-ae87-4a6b-913b-12f12815a94f fwd="76.89.239.212" dyno= connect= service= status=503 bytes= protocol=https
+2018-07-02T00:14:36.884648+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=face-detection6969.herokuapp.com request_id=1c18c873-2056-4b1b-8f1a-88c177b4a2d4 fwd="76.89.239.212" dyno= connect= service= status=503 bytes= protocol=https
+2018-07-02T00:14:37.403078+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=face-detection6969.herokuapp.com request_id=0b52988c-799b-4619-9075-5fc55239e3b9 fwd="76.89.239.212" dyno= connect= service= status=503 bytes= protocol=https
+2018-07-02T00:14:39.564071+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=face-detection6969.herokuapp.com request_id=e40ec6c1-2226-4e44-8f9b-44f509fe133e fwd="76.89.239.212" dyno= connect= service= status=503 bytes= protocol=https
+2018-07-02T00:14:40.083385+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=face-detection6969.herokuapp.com request_id=a33ec590-c193-478e-968d-4088129fef71 fwd="76.89.239.212" dyno= connect= service= status=503 bytes= protocol=https
+2018-07-02T00:14:56.973291+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=face-detection6969.herokuapp.com request_id=6fe2018b-c8f1-4c70-9c83-d4d7cd3322be fwd="76.89.239.212" dyno= connect= service= status=503 bytes= protocol=https
+2018-07-02T00:14:57.631878+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=face-detection6969.herokuapp.com request_id=85dcc76b-a1e5-4319-8c93-e17c8ca828df fwd="76.89.239.212" dyno= connect= service= status=503 bytes= protocol=https
+2018-07-02T00:15:14.553801+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=face-detection6969.herokuapp.com request_id=9ced17af-92b3-4f8c-9ff9-0d1eff1bcbd8 fwd="76.89.239.212" dyno= connect= service= status=503 bytes= protocol=https
+2018-07-02T00:15:15.225008+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=face-detection6969.herokuapp.com request_id=eecaf361-66b5-4f79-bd25-9be0958c0c00 fwd="76.89.239.212" dyno= connect= service= status=503 bytes= protocol=https
+2018-07-02T00:16:48.775476+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=face-detection6969.herokuapp.com request_id=529353c5-b608-42ba-aade-359c1569f502 fwd="76.89.239.212" dyno= connect= service= status=503 bytes= protocol=https
+2018-07-02T00:16:49.466901+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=face-detection6969.herokuapp.com request_id=f0ebcb0e-5f92-403a-9702-882c3ea160cd fwd="76.89.239.212" dyno= connect= service= status=503 bytes= protocol=https
+2018-07-02T00:19:19.561176+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=face-detection6969.herokuapp.com request_id=1da96d39-ee34-4dab-a310-78ef7b652353 fwd="76.89.239.212" dyno= connect= service= status=503 bytes= protocol=https
+2018-07-02T00:19:20.232629+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=face-detection6969.herokuapp.com request_id=ced6cbd2-2171-406b-a558-edf19dfab29d fwd="76.89.239.212" dyno= connect= service= status=503 bytes= protocol=https
+2018-07-02T00:20:57.350043+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=face-detection6969.herokuapp.com request_id=5831c9af-1c32-4fb9-bbec-92ae1389c6c9 fwd="76.89.239.212" dyno= connect= service= status=503 bytes= protocol=https
+2018-07-02T00:20:57.966606+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=face-detection6969.herokuapp.com request_id=dfb65e90-6b71-4205-b25d-6655291b3fc7 fwd="76.89.239.212" dyno= connect= service= status=503 bytes= protocol=https
+2018-07-02T00:36:20.999156+00:00 heroku[web.1]: State changed from crashed to starting
+2018-07-02T00:36:25.141549+00:00 heroku[web.1]: Starting process with command `npm start`
+2018-07-02T00:36:27.831304+00:00 app[web.1]: 
+2018-07-02T00:36:27.831329+00:00 app[web.1]: > cobrakai@1.0.0 start /app
+2018-07-02T00:36:27.831330+00:00 app[web.1]: > node server.js
+2018-07-02T00:36:27.831331+00:00 app[web.1]: 
+2018-07-02T00:36:28.347727+00:00 app[web.1]: Directory Name /app/models
+2018-07-02T00:36:29.092212+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T00:36:29.092317+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+2018-07-02T00:36:29.092370+00:00 app[web.1]: (node:20) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+2018-07-02T00:36:29.092437+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T00:36:29.092494+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)
+2018-07-02T00:36:29.092542+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T00:36:29.092648+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T00:36:29.092604+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 3)
+2018-07-02T00:36:29.092713+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 4)
+2018-07-02T00:36:29.092758+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T00:36:29.092810+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 5)
+2018-07-02T00:36:29.092853+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T00:36:29.092906+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 6)
+2018-07-02T00:36:29.110546+00:00 app[web.1]: Unhandled rejection SequelizeConnectionRefusedError: connect ECONNREFUSED 127.0.0.1:3306
+2018-07-02T00:36:29.110550+00:00 app[web.1]: at Utils.Promise.tap.then.catch.err (/app/node_modules/sequelize/lib/dialects/mysql/connection-manager.js:139:19)
+2018-07-02T00:36:29.110552+00:00 app[web.1]: at tryCatcher (/app/node_modules/bluebird/js/release/util.js:16:23)
+2018-07-02T00:36:29.110554+00:00 app[web.1]: at Promise._settlePromiseFromHandler (/app/node_modules/bluebird/js/release/promise.js:512:31)
+2018-07-02T00:36:29.110555+00:00 app[web.1]: at Promise._settlePromise (/app/node_modules/bluebird/js/release/promise.js:569:18)
+2018-07-02T00:36:29.110560+00:00 app[web.1]: at Promise._settlePromise0 (/app/node_modules/bluebird/js/release/promise.js:614:10)
+2018-07-02T00:36:29.110561+00:00 app[web.1]: at Promise._settlePromises (/app/node_modules/bluebird/js/release/promise.js:689:18)
+2018-07-02T00:36:29.110572+00:00 app[web.1]: at Async._drainQueue (/app/node_modules/bluebird/js/release/async.js:133:16)
+2018-07-02T00:36:29.110574+00:00 app[web.1]: at Async._drainQueues (/app/node_modules/bluebird/js/release/async.js:143:10)
+2018-07-02T00:36:29.110575+00:00 app[web.1]: at Immediate.Async.drainQueues (/app/node_modules/bluebird/js/release/async.js:17:14)
+2018-07-02T00:36:29.110577+00:00 app[web.1]: at runCallback (timers.js:810:20)
+2018-07-02T00:36:29.110578+00:00 app[web.1]: at tryOnImmediate (timers.js:768:5)
+2018-07-02T00:36:29.110580+00:00 app[web.1]: at processImmediate [as _immediateCallback] (timers.js:745:5)
+2018-07-02T00:36:39.187006+00:00 heroku[web.1]: Process exited with status 0
+2018-07-02T00:36:40.098227+00:00 heroku[web.1]: State changed from starting to crashed
+2018-07-02T00:43:16.690014+00:00 heroku[web.1]: State changed from crashed to starting
+2018-07-02T00:43:16.478737+00:00 app[api]: Attach JAWSDB (@ref:jawsdb-fitted-77134) by user dan.kubiak@gmail.com
+2018-07-02T00:43:16.478737+00:00 app[api]: Release v6 created by user dan.kubiak@gmail.com
+2018-07-02T00:43:23.573462+00:00 heroku[web.1]: Starting process with command `npm start`
+2018-07-02T00:43:26.983422+00:00 heroku[web.1]: Restarting
+2018-07-02T00:43:26.629975+00:00 app[web.1]: 
+2018-07-02T00:43:26.629996+00:00 app[web.1]: > cobrakai@1.0.0 start /app
+2018-07-02T00:43:26.629997+00:00 app[web.1]: > node server.js
+2018-07-02T00:43:26.629999+00:00 app[web.1]: 
+2018-07-02T00:43:26.545566+00:00 app[api]: Update JAWSDB by jawsdb by user jawsdb@addons.heroku.com
+2018-07-02T00:43:26.545566+00:00 app[api]: Release v7 created by user jawsdb@addons.heroku.com
+2018-07-02T00:43:27.673464+00:00 app[web.1]: Directory Name /app/models
+2018-07-02T00:43:29.336938+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T00:43:29.337132+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+2018-07-02T00:43:29.337224+00:00 app[web.1]: (node:20) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+2018-07-02T00:43:29.337406+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)
+2018-07-02T00:43:29.337493+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T00:43:29.337314+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T00:43:29.337583+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 3)
+2018-07-02T00:43:29.337755+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 4)
+2018-07-02T00:43:29.337838+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T00:43:29.337911+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 5)
+2018-07-02T00:43:29.337979+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T00:43:29.338063+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 6)
+2018-07-02T00:43:29.366084+00:00 app[web.1]: Unhandled rejection SequelizeConnectionRefusedError: connect ECONNREFUSED 127.0.0.1:3306
+2018-07-02T00:43:29.366088+00:00 app[web.1]: at Utils.Promise.tap.then.catch.err (/app/node_modules/sequelize/lib/dialects/mysql/connection-manager.js:139:19)
+2018-07-02T00:43:29.366090+00:00 app[web.1]: at tryCatcher (/app/node_modules/bluebird/js/release/util.js:16:23)
+2018-07-02T00:43:29.366092+00:00 app[web.1]: at Promise._settlePromiseFromHandler (/app/node_modules/bluebird/js/release/promise.js:512:31)
+2018-07-02T00:43:29.366096+00:00 app[web.1]: at Promise._settlePromise0 (/app/node_modules/bluebird/js/release/promise.js:614:10)
+2018-07-02T00:43:29.366097+00:00 app[web.1]: at Promise._settlePromises (/app/node_modules/bluebird/js/release/promise.js:689:18)
+2018-07-02T00:43:29.366094+00:00 app[web.1]: at Promise._settlePromise (/app/node_modules/bluebird/js/release/promise.js:569:18)
+2018-07-02T00:43:29.337665+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T00:43:29.366100+00:00 app[web.1]: at Async._drainQueues (/app/node_modules/bluebird/js/release/async.js:143:10)
+2018-07-02T00:43:29.366099+00:00 app[web.1]: at Async._drainQueue (/app/node_modules/bluebird/js/release/async.js:133:16)
+2018-07-02T00:43:29.366102+00:00 app[web.1]: at Immediate.Async.drainQueues (/app/node_modules/bluebird/js/release/async.js:17:14)
+2018-07-02T00:43:29.366104+00:00 app[web.1]: at runCallback (timers.js:810:20)
+2018-07-02T00:43:29.366107+00:00 app[web.1]: at processImmediate [as _immediateCallback] (timers.js:745:5)
+2018-07-02T00:43:29.366106+00:00 app[web.1]: at tryOnImmediate (timers.js:768:5)
+2018-07-02T00:43:31.598330+00:00 heroku[web.1]: Starting process with command `npm start`
+2018-07-02T00:43:34.246863+00:00 app[web.1]: 
+2018-07-02T00:43:34.246882+00:00 app[web.1]: > cobrakai@1.0.0 start /app
+2018-07-02T00:43:34.246884+00:00 app[web.1]: > node server.js
+2018-07-02T00:43:34.246886+00:00 app[web.1]: 
+2018-07-02T00:43:34.863863+00:00 app[web.1]: Directory Name /app/models
+2018-07-02T00:43:35.663744+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T00:43:35.663927+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+2018-07-02T00:43:35.664037+00:00 app[web.1]: (node:20) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+2018-07-02T00:43:35.664125+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T00:43:35.664198+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)
+2018-07-02T00:43:35.664245+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T00:43:35.664306+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 3)
+2018-07-02T00:43:35.664349+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T00:43:35.664409+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 4)
+2018-07-02T00:43:35.664453+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T00:43:35.664503+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 5)
+2018-07-02T00:43:35.664544+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T00:43:35.664593+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 6)
+2018-07-02T00:43:35.686470+00:00 app[web.1]: Unhandled rejection SequelizeConnectionRefusedError: connect ECONNREFUSED 127.0.0.1:3306
+2018-07-02T00:43:35.686473+00:00 app[web.1]: at Utils.Promise.tap.then.catch.err (/app/node_modules/sequelize/lib/dialects/mysql/connection-manager.js:139:19)
+2018-07-02T00:43:35.686477+00:00 app[web.1]: at tryCatcher (/app/node_modules/bluebird/js/release/util.js:16:23)
+2018-07-02T00:43:35.686480+00:00 app[web.1]: at Promise._settlePromiseFromHandler (/app/node_modules/bluebird/js/release/promise.js:512:31)
+2018-07-02T00:43:35.686481+00:00 app[web.1]: at Promise._settlePromise (/app/node_modules/bluebird/js/release/promise.js:569:18)
+2018-07-02T00:43:35.686485+00:00 app[web.1]: at Promise._settlePromise0 (/app/node_modules/bluebird/js/release/promise.js:614:10)
+2018-07-02T00:43:35.686487+00:00 app[web.1]: at Promise._settlePromises (/app/node_modules/bluebird/js/release/promise.js:689:18)
+2018-07-02T00:43:35.686488+00:00 app[web.1]: at Async._drainQueue (/app/node_modules/bluebird/js/release/async.js:133:16)
+2018-07-02T00:43:35.686490+00:00 app[web.1]: at Async._drainQueues (/app/node_modules/bluebird/js/release/async.js:143:10)
+2018-07-02T00:43:35.686491+00:00 app[web.1]: at Immediate.Async.drainQueues (/app/node_modules/bluebird/js/release/async.js:17:14)
+2018-07-02T00:43:35.686493+00:00 app[web.1]: at runCallback (timers.js:810:20)
+2018-07-02T00:43:35.686495+00:00 app[web.1]: at tryOnImmediate (timers.js:768:5)
+2018-07-02T00:43:35.686496+00:00 app[web.1]: at processImmediate [as _immediateCallback] (timers.js:745:5)
+2018-07-02T00:43:39.467307+00:00 heroku[web.1]: Process exited with status 0
+2018-07-02T00:43:45.776230+00:00 heroku[web.1]: State changed from starting to crashed
+2018-07-02T00:43:45.745393+00:00 heroku[web.1]: Process exited with status 0
+2018-07-02T01:25:12.774929+00:00 heroku[web.1]: State changed from crashed to starting
+2018-07-02T01:25:12.541977+00:00 app[api]: Set type config vars by user dan.kubiak@gmail.com
+2018-07-02T01:25:12.541977+00:00 app[api]: Release v8 created by user dan.kubiak@gmail.com
+2018-07-02T01:25:17.019620+00:00 heroku[web.1]: Starting process with command `npm start`
+2018-07-02T01:25:19.008946+00:00 app[web.1]: 
+2018-07-02T01:25:19.008973+00:00 app[web.1]: > cobrakai@1.0.0 start /app
+2018-07-02T01:25:19.008975+00:00 app[web.1]: > node server.js
+2018-07-02T01:25:19.008976+00:00 app[web.1]: 
+2018-07-02T01:25:19.523315+00:00 app[web.1]: Directory Name /app/models
+2018-07-02T01:25:20.393086+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:25:20.393230+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+2018-07-02T01:25:20.393373+00:00 app[web.1]: (node:20) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+2018-07-02T01:25:20.393535+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)
+2018-07-02T01:25:20.393588+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:25:20.393652+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 3)
+2018-07-02T01:25:20.393695+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:25:20.393442+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:25:20.393787+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 4)
+2018-07-02T01:25:20.393860+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:25:20.393961+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:25:20.393914+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 5)
+2018-07-02T01:25:20.394039+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 6)
+2018-07-02T01:25:20.417634+00:00 app[web.1]: at Utils.Promise.tap.then.catch.err (/app/node_modules/sequelize/lib/dialects/mysql/connection-manager.js:139:19)
+2018-07-02T01:25:20.417637+00:00 app[web.1]: at tryCatcher (/app/node_modules/bluebird/js/release/util.js:16:23)
+2018-07-02T01:25:20.417631+00:00 app[web.1]: Unhandled rejection SequelizeConnectionRefusedError: connect ECONNREFUSED 127.0.0.1:3306
+2018-07-02T01:25:20.417641+00:00 app[web.1]: at Promise._settlePromise (/app/node_modules/bluebird/js/release/promise.js:569:18)
+2018-07-02T01:25:20.417639+00:00 app[web.1]: at Promise._settlePromiseFromHandler (/app/node_modules/bluebird/js/release/promise.js:512:31)
+2018-07-02T01:25:20.417642+00:00 app[web.1]: at Promise._settlePromise0 (/app/node_modules/bluebird/js/release/promise.js:614:10)
+2018-07-02T01:25:20.417644+00:00 app[web.1]: at Async._drainQueue (/app/node_modules/bluebird/js/release/async.js:133:16)
+2018-07-02T01:25:20.417643+00:00 app[web.1]: at Promise._settlePromises (/app/node_modules/bluebird/js/release/promise.js:689:18)
+2018-07-02T01:25:20.417647+00:00 app[web.1]: at Immediate.Async.drainQueues (/app/node_modules/bluebird/js/release/async.js:17:14)
+2018-07-02T01:25:20.417645+00:00 app[web.1]: at Async._drainQueues (/app/node_modules/bluebird/js/release/async.js:143:10)
+2018-07-02T01:25:20.417649+00:00 app[web.1]: at tryOnImmediate (timers.js:768:5)
+2018-07-02T01:25:20.417648+00:00 app[web.1]: at runCallback (timers.js:810:20)
+2018-07-02T01:25:20.417650+00:00 app[web.1]: at processImmediate [as _immediateCallback] (timers.js:745:5)
+2018-07-02T01:25:30.468129+00:00 heroku[web.1]: Process exited with status 0
+2018-07-02T01:25:30.667959+00:00 heroku[web.1]: State changed from starting to crashed
+2018-07-02T01:25:30.671091+00:00 heroku[web.1]: State changed from crashed to starting
+2018-07-02T01:25:36.845526+00:00 heroku[web.1]: Starting process with command `npm start`
+2018-07-02T01:25:40.036822+00:00 app[web.1]: 
+2018-07-02T01:25:40.036838+00:00 app[web.1]: > cobrakai@1.0.0 start /app
+2018-07-02T01:25:40.036840+00:00 app[web.1]: > node server.js
+2018-07-02T01:25:40.036842+00:00 app[web.1]: 
+2018-07-02T01:25:40.943712+00:00 app[web.1]: Directory Name /app/models
+2018-07-02T01:25:42.194568+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:25:42.194949+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+2018-07-02T01:25:42.195067+00:00 app[web.1]: (node:20) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+2018-07-02T01:25:42.195166+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:25:42.195269+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)
+2018-07-02T01:25:42.195354+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:25:42.195458+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 3)
+2018-07-02T01:25:42.195537+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:25:42.195647+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 4)
+2018-07-02T01:25:42.195727+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:25:42.195819+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 5)
+2018-07-02T01:25:42.195896+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:25:42.195987+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 6)
+2018-07-02T01:25:42.222476+00:00 app[web.1]: Unhandled rejection SequelizeConnectionRefusedError: connect ECONNREFUSED 127.0.0.1:3306
+2018-07-02T01:25:42.222480+00:00 app[web.1]: at Utils.Promise.tap.then.catch.err (/app/node_modules/sequelize/lib/dialects/mysql/connection-manager.js:139:19)
+2018-07-02T01:25:42.222482+00:00 app[web.1]: at tryCatcher (/app/node_modules/bluebird/js/release/util.js:16:23)
+2018-07-02T01:25:42.222484+00:00 app[web.1]: at Promise._settlePromiseFromHandler (/app/node_modules/bluebird/js/release/promise.js:512:31)
+2018-07-02T01:25:42.222486+00:00 app[web.1]: at Promise._settlePromise (/app/node_modules/bluebird/js/release/promise.js:569:18)
+2018-07-02T01:25:42.222487+00:00 app[web.1]: at Promise._settlePromise0 (/app/node_modules/bluebird/js/release/promise.js:614:10)
+2018-07-02T01:25:42.222489+00:00 app[web.1]: at Promise._settlePromises (/app/node_modules/bluebird/js/release/promise.js:689:18)
+2018-07-02T01:25:42.222490+00:00 app[web.1]: at Async._drainQueue (/app/node_modules/bluebird/js/release/async.js:133:16)
+2018-07-02T01:25:42.222493+00:00 app[web.1]: at Immediate.Async.drainQueues (/app/node_modules/bluebird/js/release/async.js:17:14)
+2018-07-02T01:25:42.222492+00:00 app[web.1]: at Async._drainQueues (/app/node_modules/bluebird/js/release/async.js:143:10)
+2018-07-02T01:25:42.222495+00:00 app[web.1]: at runCallback (timers.js:810:20)
+2018-07-02T01:25:42.222497+00:00 app[web.1]: at tryOnImmediate (timers.js:768:5)
+2018-07-02T01:25:42.222498+00:00 app[web.1]: at processImmediate [as _immediateCallback] (timers.js:745:5)
+2018-07-02T01:25:52.366438+00:00 heroku[web.1]: State changed from starting to crashed
+2018-07-02T01:25:52.334880+00:00 heroku[web.1]: Process exited with status 0
+2018-07-02T01:26:33.021689+00:00 app[api]: Set project_id config vars by user dan.kubiak@gmail.com
+2018-07-02T01:26:33.021689+00:00 app[api]: Release v9 created by user dan.kubiak@gmail.com
+2018-07-02T01:26:34.008811+00:00 heroku[web.1]: State changed from crashed to starting
+2018-07-02T01:26:42.356620+00:00 heroku[web.1]: Starting process with command `npm start`
+2018-07-02T01:26:44.741071+00:00 app[web.1]: 
+2018-07-02T01:26:44.741088+00:00 app[web.1]: > cobrakai@1.0.0 start /app
+2018-07-02T01:26:44.741089+00:00 app[web.1]: > node server.js
+2018-07-02T01:26:44.741090+00:00 app[web.1]: 
+2018-07-02T01:26:45.268414+00:00 app[web.1]: Directory Name /app/models
+2018-07-02T01:26:46.045526+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:26:46.045692+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+2018-07-02T01:26:46.045765+00:00 app[web.1]: (node:20) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+2018-07-02T01:26:46.045813+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:26:46.045897+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)
+2018-07-02T01:26:46.045931+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:26:46.046027+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 3)
+2018-07-02T01:26:46.046115+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:26:46.046163+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 4)
+2018-07-02T01:26:46.046231+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:26:46.046301+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 5)
+2018-07-02T01:26:46.046417+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:26:46.046419+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 6)
+2018-07-02T01:26:46.068468+00:00 app[web.1]: Unhandled rejection SequelizeConnectionRefusedError: connect ECONNREFUSED 127.0.0.1:3306
+2018-07-02T01:26:46.068471+00:00 app[web.1]: at Utils.Promise.tap.then.catch.err (/app/node_modules/sequelize/lib/dialects/mysql/connection-manager.js:139:19)
+2018-07-02T01:26:46.068474+00:00 app[web.1]: at tryCatcher (/app/node_modules/bluebird/js/release/util.js:16:23)
+2018-07-02T01:26:46.068476+00:00 app[web.1]: at Promise._settlePromiseFromHandler (/app/node_modules/bluebird/js/release/promise.js:512:31)
+2018-07-02T01:26:46.068478+00:00 app[web.1]: at Promise._settlePromise (/app/node_modules/bluebird/js/release/promise.js:569:18)
+2018-07-02T01:26:46.068479+00:00 app[web.1]: at Promise._settlePromise0 (/app/node_modules/bluebird/js/release/promise.js:614:10)
+2018-07-02T01:26:46.068481+00:00 app[web.1]: at Promise._settlePromises (/app/node_modules/bluebird/js/release/promise.js:689:18)
+2018-07-02T01:26:46.068483+00:00 app[web.1]: at Async._drainQueue (/app/node_modules/bluebird/js/release/async.js:133:16)
+2018-07-02T01:26:46.068487+00:00 app[web.1]: at Async._drainQueues (/app/node_modules/bluebird/js/release/async.js:143:10)
+2018-07-02T01:26:46.068489+00:00 app[web.1]: at Immediate.Async.drainQueues (/app/node_modules/bluebird/js/release/async.js:17:14)
+2018-07-02T01:26:46.068491+00:00 app[web.1]: at runCallback (timers.js:810:20)
+2018-07-02T01:26:46.068493+00:00 app[web.1]: at tryOnImmediate (timers.js:768:5)
+2018-07-02T01:26:46.068494+00:00 app[web.1]: at processImmediate [as _immediateCallback] (timers.js:745:5)
+2018-07-02T01:26:56.136824+00:00 heroku[web.1]: Process exited with status 0
+2018-07-02T01:26:56.156059+00:00 heroku[web.1]: State changed from starting to crashed
+2018-07-02T01:27:33.862912+00:00 heroku[web.1]: State changed from crashed to starting
+2018-07-02T01:27:33.710141+00:00 app[api]: Set private_key_id config vars by user dan.kubiak@gmail.com
+2018-07-02T01:27:33.710141+00:00 app[api]: Release v10 created by user dan.kubiak@gmail.com
+2018-07-02T01:27:42.119883+00:00 heroku[web.1]: Starting process with command `npm start`
+2018-07-02T01:27:45.064779+00:00 app[web.1]: 
+2018-07-02T01:27:45.064795+00:00 app[web.1]: > cobrakai@1.0.0 start /app
+2018-07-02T01:27:45.064797+00:00 app[web.1]: > node server.js
+2018-07-02T01:27:45.064798+00:00 app[web.1]: 
+2018-07-02T01:27:45.761670+00:00 app[web.1]: Directory Name /app/models
+2018-07-02T01:27:47.016699+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:27:47.016956+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+2018-07-02T01:27:47.017080+00:00 app[web.1]: (node:20) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+2018-07-02T01:27:47.017194+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:27:47.017315+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)
+2018-07-02T01:27:47.017418+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:27:47.017542+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 3)
+2018-07-02T01:27:47.017645+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:27:47.017769+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 4)
+2018-07-02T01:27:47.017870+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:27:47.017972+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 5)
+2018-07-02T01:27:47.018066+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:27:47.018183+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 6)
+2018-07-02T01:27:47.045032+00:00 app[web.1]: Unhandled rejection SequelizeConnectionRefusedError: connect ECONNREFUSED 127.0.0.1:3306
+2018-07-02T01:27:47.045036+00:00 app[web.1]: at Utils.Promise.tap.then.catch.err (/app/node_modules/sequelize/lib/dialects/mysql/connection-manager.js:139:19)
+2018-07-02T01:27:47.045040+00:00 app[web.1]: at tryCatcher (/app/node_modules/bluebird/js/release/util.js:16:23)
+2018-07-02T01:27:47.045042+00:00 app[web.1]: at Promise._settlePromiseFromHandler (/app/node_modules/bluebird/js/release/promise.js:512:31)
+2018-07-02T01:27:47.045044+00:00 app[web.1]: at Promise._settlePromise (/app/node_modules/bluebird/js/release/promise.js:569:18)
+2018-07-02T01:27:47.045045+00:00 app[web.1]: at Promise._settlePromise0 (/app/node_modules/bluebird/js/release/promise.js:614:10)
+2018-07-02T01:27:47.045047+00:00 app[web.1]: at Promise._settlePromises (/app/node_modules/bluebird/js/release/promise.js:689:18)
+2018-07-02T01:27:47.045048+00:00 app[web.1]: at Async._drainQueue (/app/node_modules/bluebird/js/release/async.js:133:16)
+2018-07-02T01:27:47.045050+00:00 app[web.1]: at Async._drainQueues (/app/node_modules/bluebird/js/release/async.js:143:10)
+2018-07-02T01:27:47.045054+00:00 app[web.1]: at Immediate.Async.drainQueues (/app/node_modules/bluebird/js/release/async.js:17:14)
+2018-07-02T01:27:47.045056+00:00 app[web.1]: at runCallback (timers.js:810:20)
+2018-07-02T01:27:47.045058+00:00 app[web.1]: at tryOnImmediate (timers.js:768:5)
+2018-07-02T01:27:47.045060+00:00 app[web.1]: at processImmediate [as _immediateCallback] (timers.js:745:5)
+2018-07-02T01:27:57.114952+00:00 heroku[web.1]: Process exited with status 0
+2018-07-02T01:27:57.216537+00:00 heroku[web.1]: State changed from starting to crashed
+2018-07-02T01:28:32.728630+00:00 heroku[web.1]: State changed from crashed to starting
+2018-07-02T01:28:32.500434+00:00 app[api]: Set private_key config vars by user dan.kubiak@gmail.com
+2018-07-02T01:28:32.500434+00:00 app[api]: Release v11 created by user dan.kubiak@gmail.com
+2018-07-02T01:28:37.212680+00:00 heroku[web.1]: Starting process with command `npm start`
+2018-07-02T01:28:39.349602+00:00 app[web.1]: 
+2018-07-02T01:28:39.349620+00:00 app[web.1]: > cobrakai@1.0.0 start /app
+2018-07-02T01:28:39.349621+00:00 app[web.1]: > node server.js
+2018-07-02T01:28:39.349622+00:00 app[web.1]: 
+2018-07-02T01:28:39.912454+00:00 app[web.1]: Directory Name /app/models
+2018-07-02T01:28:40.780633+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:28:40.780762+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+2018-07-02T01:28:40.780849+00:00 app[web.1]: (node:20) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+2018-07-02T01:28:40.780993+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)
+2018-07-02T01:28:40.781058+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:28:40.780918+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:28:40.781137+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 3)
+2018-07-02T01:28:40.781199+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:28:40.781276+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 4)
+2018-07-02T01:28:40.781340+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:28:40.781462+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:28:40.781403+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 5)
+2018-07-02T01:28:40.799758+00:00 app[web.1]: Unhandled rejection SequelizeConnectionRefusedError: connect ECONNREFUSED 127.0.0.1:3306
+2018-07-02T01:28:40.781528+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 6)
+2018-07-02T01:28:40.799763+00:00 app[web.1]: at Utils.Promise.tap.then.catch.err (/app/node_modules/sequelize/lib/dialects/mysql/connection-manager.js:139:19)
+2018-07-02T01:28:40.799765+00:00 app[web.1]: at tryCatcher (/app/node_modules/bluebird/js/release/util.js:16:23)
+2018-07-02T01:28:40.799767+00:00 app[web.1]: at Promise._settlePromiseFromHandler (/app/node_modules/bluebird/js/release/promise.js:512:31)
+2018-07-02T01:28:40.799768+00:00 app[web.1]: at Promise._settlePromise (/app/node_modules/bluebird/js/release/promise.js:569:18)
+2018-07-02T01:28:40.799770+00:00 app[web.1]: at Promise._settlePromise0 (/app/node_modules/bluebird/js/release/promise.js:614:10)
+2018-07-02T01:28:40.799772+00:00 app[web.1]: at Promise._settlePromises (/app/node_modules/bluebird/js/release/promise.js:689:18)
+2018-07-02T01:28:40.799773+00:00 app[web.1]: at Async._drainQueue (/app/node_modules/bluebird/js/release/async.js:133:16)
+2018-07-02T01:28:40.799775+00:00 app[web.1]: at Async._drainQueues (/app/node_modules/bluebird/js/release/async.js:143:10)
+2018-07-02T01:28:40.799776+00:00 app[web.1]: at Immediate.Async.drainQueues (/app/node_modules/bluebird/js/release/async.js:17:14)
+2018-07-02T01:28:40.799778+00:00 app[web.1]: at runCallback (timers.js:810:20)
+2018-07-02T01:28:40.799780+00:00 app[web.1]: at tryOnImmediate (timers.js:768:5)
+2018-07-02T01:28:40.799781+00:00 app[web.1]: at processImmediate [as _immediateCallback] (timers.js:745:5)
+2018-07-02T01:28:50.880820+00:00 heroku[web.1]: Process exited with status 0
+2018-07-02T01:28:50.939142+00:00 heroku[web.1]: State changed from starting to crashed
+2018-07-02T01:28:51.624185+00:00 app[api]: Release v12 created by user dan.kubiak@gmail.com
+2018-07-02T01:28:51.624185+00:00 app[api]: Set client_email config vars by user dan.kubiak@gmail.com
+2018-07-02T01:28:51.977229+00:00 heroku[web.1]: State changed from crashed to starting
+2018-07-02T01:28:58.353765+00:00 heroku[web.1]: Starting process with command `npm start`
+2018-07-02T01:29:02.170594+00:00 app[web.1]: 
+2018-07-02T01:29:02.170619+00:00 app[web.1]: > cobrakai@1.0.0 start /app
+2018-07-02T01:29:02.170620+00:00 app[web.1]: > node server.js
+2018-07-02T01:29:02.170622+00:00 app[web.1]: 
+2018-07-02T01:29:03.312518+00:00 app[web.1]: Directory Name /app/models
+2018-07-02T01:29:04.956361+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:29:04.956539+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+2018-07-02T01:29:04.956656+00:00 app[web.1]: (node:20) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+2018-07-02T01:29:04.956762+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:29:04.956874+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)
+2018-07-02T01:29:04.956939+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:29:04.957060+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 3)
+2018-07-02T01:29:04.957115+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:29:04.957215+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 4)
+2018-07-02T01:29:04.957289+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:29:04.957367+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 5)
+2018-07-02T01:29:04.957441+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:29:04.957521+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 6)
+2018-07-02T01:29:04.986278+00:00 app[web.1]: Unhandled rejection SequelizeConnectionRefusedError: connect ECONNREFUSED 127.0.0.1:3306
+2018-07-02T01:29:04.986282+00:00 app[web.1]: at Utils.Promise.tap.then.catch.err (/app/node_modules/sequelize/lib/dialects/mysql/connection-manager.js:139:19)
+2018-07-02T01:29:04.986284+00:00 app[web.1]: at tryCatcher (/app/node_modules/bluebird/js/release/util.js:16:23)
+2018-07-02T01:29:04.986286+00:00 app[web.1]: at Promise._settlePromiseFromHandler (/app/node_modules/bluebird/js/release/promise.js:512:31)
+2018-07-02T01:29:04.986287+00:00 app[web.1]: at Promise._settlePromise (/app/node_modules/bluebird/js/release/promise.js:569:18)
+2018-07-02T01:29:04.986290+00:00 app[web.1]: at Promise._settlePromise0 (/app/node_modules/bluebird/js/release/promise.js:614:10)
+2018-07-02T01:29:04.986291+00:00 app[web.1]: at Promise._settlePromises (/app/node_modules/bluebird/js/release/promise.js:689:18)
+2018-07-02T01:29:04.986293+00:00 app[web.1]: at Async._drainQueue (/app/node_modules/bluebird/js/release/async.js:133:16)
+2018-07-02T01:29:04.986294+00:00 app[web.1]: at Async._drainQueues (/app/node_modules/bluebird/js/release/async.js:143:10)
+2018-07-02T01:29:04.986296+00:00 app[web.1]: at Immediate.Async.drainQueues (/app/node_modules/bluebird/js/release/async.js:17:14)
+2018-07-02T01:29:04.986298+00:00 app[web.1]: at runCallback (timers.js:810:20)
+2018-07-02T01:29:04.986299+00:00 app[web.1]: at tryOnImmediate (timers.js:768:5)
+2018-07-02T01:29:04.986301+00:00 app[web.1]: at processImmediate [as _immediateCallback] (timers.js:745:5)
+2018-07-02T01:29:15.104758+00:00 heroku[web.1]: Process exited with status 0
+2018-07-02T01:29:15.124557+00:00 heroku[web.1]: State changed from starting to crashed
+2018-07-02T01:30:08.177774+00:00 heroku[web.1]: State changed from crashed to starting
+2018-07-02T01:30:07.798803+00:00 app[api]: Set client_id config vars by user dan.kubiak@gmail.com
+2018-07-02T01:30:07.798803+00:00 app[api]: Release v13 created by user dan.kubiak@gmail.com
+2018-07-02T01:30:12.078780+00:00 heroku[web.1]: Starting process with command `npm start`
+2018-07-02T01:30:14.159591+00:00 app[web.1]: 
+2018-07-02T01:30:14.159622+00:00 app[web.1]: > cobrakai@1.0.0 start /app
+2018-07-02T01:30:14.159624+00:00 app[web.1]: > node server.js
+2018-07-02T01:30:14.159626+00:00 app[web.1]: 
+2018-07-02T01:30:14.773862+00:00 app[web.1]: Directory Name /app/models
+2018-07-02T01:30:15.760084+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:30:15.760295+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+2018-07-02T01:30:15.760392+00:00 app[web.1]: (node:20) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+2018-07-02T01:30:15.760462+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:30:15.760584+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)
+2018-07-02T01:30:15.760625+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:30:15.760691+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 3)
+2018-07-02T01:30:15.760776+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:30:15.760844+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 4)
+2018-07-02T01:30:15.760888+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:30:15.761020+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 5)
+2018-07-02T01:30:15.761064+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:30:15.761113+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 6)
+2018-07-02T01:30:15.780403+00:00 app[web.1]: at Utils.Promise.tap.then.catch.err (/app/node_modules/sequelize/lib/dialects/mysql/connection-manager.js:139:19)
+2018-07-02T01:30:15.780398+00:00 app[web.1]: Unhandled rejection SequelizeConnectionRefusedError: connect ECONNREFUSED 127.0.0.1:3306
+2018-07-02T01:30:15.780406+00:00 app[web.1]: at tryCatcher (/app/node_modules/bluebird/js/release/util.js:16:23)
+2018-07-02T01:30:15.780408+00:00 app[web.1]: at Promise._settlePromiseFromHandler (/app/node_modules/bluebird/js/release/promise.js:512:31)
+2018-07-02T01:30:15.780409+00:00 app[web.1]: at Promise._settlePromise (/app/node_modules/bluebird/js/release/promise.js:569:18)
+2018-07-02T01:30:15.780411+00:00 app[web.1]: at Promise._settlePromise0 (/app/node_modules/bluebird/js/release/promise.js:614:10)
+2018-07-02T01:30:15.780412+00:00 app[web.1]: at Promise._settlePromises (/app/node_modules/bluebird/js/release/promise.js:689:18)
+2018-07-02T01:30:15.780414+00:00 app[web.1]: at Async._drainQueue (/app/node_modules/bluebird/js/release/async.js:133:16)
+2018-07-02T01:30:15.780416+00:00 app[web.1]: at Async._drainQueues (/app/node_modules/bluebird/js/release/async.js:143:10)
+2018-07-02T01:30:15.780417+00:00 app[web.1]: at Immediate.Async.drainQueues (/app/node_modules/bluebird/js/release/async.js:17:14)
+2018-07-02T01:30:15.780419+00:00 app[web.1]: at runCallback (timers.js:810:20)
+2018-07-02T01:30:15.780420+00:00 app[web.1]: at tryOnImmediate (timers.js:768:5)
+2018-07-02T01:30:15.780421+00:00 app[web.1]: at processImmediate [as _immediateCallback] (timers.js:745:5)
+2018-07-02T01:30:25.839564+00:00 heroku[web.1]: Process exited with status 0
+2018-07-02T01:30:26.205229+00:00 heroku[web.1]: State changed from starting to crashed
+2018-07-02T01:31:14.368011+00:00 heroku[web.1]: State changed from crashed to starting
+2018-07-02T01:31:13.718312+00:00 app[api]: Set auth_uri config vars by user dan.kubiak@gmail.com
+2018-07-02T01:31:13.718312+00:00 app[api]: Release v14 created by user dan.kubiak@gmail.com
+2018-07-02T01:31:21.119245+00:00 heroku[web.1]: Starting process with command `npm start`
+2018-07-02T01:31:24.060244+00:00 app[web.1]: 
+2018-07-02T01:31:24.060263+00:00 app[web.1]: > cobrakai@1.0.0 start /app
+2018-07-02T01:31:24.060265+00:00 app[web.1]: > node server.js
+2018-07-02T01:31:24.060266+00:00 app[web.1]: 
+2018-07-02T01:31:25.188728+00:00 app[web.1]: Directory Name /app/models
+2018-07-02T01:31:26.577606+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:31:26.577864+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+2018-07-02T01:31:26.578019+00:00 app[web.1]: (node:20) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+2018-07-02T01:31:26.578155+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:31:26.578280+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)
+2018-07-02T01:31:26.578377+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:31:26.578502+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 3)
+2018-07-02T01:31:26.578597+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:31:26.578711+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 4)
+2018-07-02T01:31:26.578802+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:31:26.578899+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 5)
+2018-07-02T01:31:26.578995+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:31:26.579091+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 6)
+2018-07-02T01:31:26.607900+00:00 app[web.1]: Unhandled rejection SequelizeConnectionRefusedError: connect ECONNREFUSED 127.0.0.1:3306
+2018-07-02T01:31:26.607904+00:00 app[web.1]: at Utils.Promise.tap.then.catch.err (/app/node_modules/sequelize/lib/dialects/mysql/connection-manager.js:139:19)
+2018-07-02T01:31:26.607906+00:00 app[web.1]: at tryCatcher (/app/node_modules/bluebird/js/release/util.js:16:23)
+2018-07-02T01:31:26.607909+00:00 app[web.1]: at Promise._settlePromiseFromHandler (/app/node_modules/bluebird/js/release/promise.js:512:31)
+2018-07-02T01:31:26.607911+00:00 app[web.1]: at Promise._settlePromise (/app/node_modules/bluebird/js/release/promise.js:569:18)
+2018-07-02T01:31:26.607913+00:00 app[web.1]: at Promise._settlePromise0 (/app/node_modules/bluebird/js/release/promise.js:614:10)
+2018-07-02T01:31:26.607914+00:00 app[web.1]: at Promise._settlePromises (/app/node_modules/bluebird/js/release/promise.js:689:18)
+2018-07-02T01:31:26.607916+00:00 app[web.1]: at Async._drainQueue (/app/node_modules/bluebird/js/release/async.js:133:16)
+2018-07-02T01:31:26.607918+00:00 app[web.1]: at Async._drainQueues (/app/node_modules/bluebird/js/release/async.js:143:10)
+2018-07-02T01:31:26.607919+00:00 app[web.1]: at Immediate.Async.drainQueues (/app/node_modules/bluebird/js/release/async.js:17:14)
+2018-07-02T01:31:26.607921+00:00 app[web.1]: at runCallback (timers.js:810:20)
+2018-07-02T01:31:26.607922+00:00 app[web.1]: at tryOnImmediate (timers.js:768:5)
+2018-07-02T01:31:26.607925+00:00 app[web.1]: at processImmediate [as _immediateCallback] (timers.js:745:5)
+2018-07-02T01:31:36.701150+00:00 heroku[web.1]: State changed from starting to crashed
+2018-07-02T01:31:36.681750+00:00 heroku[web.1]: Process exited with status 0
+2018-07-02T01:32:11.788401+00:00 heroku[web.1]: State changed from crashed to starting
+2018-07-02T01:32:11.425330+00:00 app[api]: Set token_uri config vars by user dan.kubiak@gmail.com
+2018-07-02T01:32:11.425330+00:00 app[api]: Release v15 created by user dan.kubiak@gmail.com
+2018-07-02T01:32:16.026210+00:00 heroku[web.1]: Starting process with command `npm start`
+2018-07-02T01:32:18.862288+00:00 app[web.1]: 
+2018-07-02T01:32:18.862314+00:00 app[web.1]: > cobrakai@1.0.0 start /app
+2018-07-02T01:32:18.862316+00:00 app[web.1]: > node server.js
+2018-07-02T01:32:18.862318+00:00 app[web.1]: 
+2018-07-02T01:32:19.459771+00:00 app[web.1]: Directory Name /app/models
+2018-07-02T01:32:20.199775+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+2018-07-02T01:32:20.199638+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:32:20.199945+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:32:20.200060+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)
+2018-07-02T01:32:20.200119+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:32:20.199851+00:00 app[web.1]: (node:20) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+2018-07-02T01:32:20.200202+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 3)
+2018-07-02T01:32:20.200259+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:32:20.200345+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 4)
+2018-07-02T01:32:20.200404+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:32:20.200466+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 5)
+2018-07-02T01:32:20.200529+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:32:20.200592+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 6)
+2018-07-02T01:32:20.219620+00:00 app[web.1]: Unhandled rejection SequelizeConnectionRefusedError: connect ECONNREFUSED 127.0.0.1:3306
+2018-07-02T01:32:20.219623+00:00 app[web.1]: at Utils.Promise.tap.then.catch.err (/app/node_modules/sequelize/lib/dialects/mysql/connection-manager.js:139:19)
+2018-07-02T01:32:20.219625+00:00 app[web.1]: at tryCatcher (/app/node_modules/bluebird/js/release/util.js:16:23)
+2018-07-02T01:32:20.219628+00:00 app[web.1]: at Promise._settlePromiseFromHandler (/app/node_modules/bluebird/js/release/promise.js:512:31)
+2018-07-02T01:32:20.219631+00:00 app[web.1]: at Promise._settlePromise0 (/app/node_modules/bluebird/js/release/promise.js:614:10)
+2018-07-02T01:32:20.219629+00:00 app[web.1]: at Promise._settlePromise (/app/node_modules/bluebird/js/release/promise.js:569:18)
+2018-07-02T01:32:20.219632+00:00 app[web.1]: at Promise._settlePromises (/app/node_modules/bluebird/js/release/promise.js:689:18)
+2018-07-02T01:32:20.219633+00:00 app[web.1]: at Async._drainQueue (/app/node_modules/bluebird/js/release/async.js:133:16)
+2018-07-02T01:32:20.219634+00:00 app[web.1]: at Async._drainQueues (/app/node_modules/bluebird/js/release/async.js:143:10)
+2018-07-02T01:32:20.219635+00:00 app[web.1]: at Immediate.Async.drainQueues (/app/node_modules/bluebird/js/release/async.js:17:14)
+2018-07-02T01:32:20.219637+00:00 app[web.1]: at runCallback (timers.js:810:20)
+2018-07-02T01:32:20.219638+00:00 app[web.1]: at tryOnImmediate (timers.js:768:5)
+2018-07-02T01:32:20.219639+00:00 app[web.1]: at processImmediate [as _immediateCallback] (timers.js:745:5)
+2018-07-02T01:32:30.301267+00:00 heroku[web.1]: Process exited with status 0
+2018-07-02T01:32:30.321497+00:00 heroku[web.1]: State changed from starting to crashed
+2018-07-02T01:32:30.954509+00:00 app[api]: Set auth_provider_x509_cert_url config vars by user dan.kubiak@gmail.com
+2018-07-02T01:32:30.954509+00:00 app[api]: Release v16 created by user dan.kubiak@gmail.com
+2018-07-02T01:32:31.228470+00:00 heroku[web.1]: State changed from crashed to starting
+2018-07-02T01:32:37.199264+00:00 heroku[web.1]: Starting process with command `npm start`
+2018-07-02T01:32:39.365538+00:00 app[web.1]: 
+2018-07-02T01:32:39.365568+00:00 app[web.1]: > cobrakai@1.0.0 start /app
+2018-07-02T01:32:39.365570+00:00 app[web.1]: > node server.js
+2018-07-02T01:32:39.365572+00:00 app[web.1]: 
+2018-07-02T01:32:40.290044+00:00 app[web.1]: Directory Name /app/models
+2018-07-02T01:32:41.464884+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:32:41.465128+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+2018-07-02T01:32:41.465265+00:00 app[web.1]: (node:20) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+2018-07-02T01:32:41.465374+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:32:41.465505+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)
+2018-07-02T01:32:41.465601+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:32:41.465735+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 3)
+2018-07-02T01:32:41.465830+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:32:41.465960+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 4)
+2018-07-02T01:32:41.466058+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:32:41.466157+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 5)
+2018-07-02T01:32:41.466250+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:32:41.494832+00:00 app[web.1]: Unhandled rejection SequelizeConnectionRefusedError: connect ECONNREFUSED 127.0.0.1:3306
+2018-07-02T01:32:41.466349+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 6)
+2018-07-02T01:32:41.494836+00:00 app[web.1]: at Utils.Promise.tap.then.catch.err (/app/node_modules/sequelize/lib/dialects/mysql/connection-manager.js:139:19)
+2018-07-02T01:32:41.494840+00:00 app[web.1]: at Promise._settlePromiseFromHandler (/app/node_modules/bluebird/js/release/promise.js:512:31)
+2018-07-02T01:32:41.494838+00:00 app[web.1]: at tryCatcher (/app/node_modules/bluebird/js/release/util.js:16:23)
+2018-07-02T01:32:41.494842+00:00 app[web.1]: at Promise._settlePromise (/app/node_modules/bluebird/js/release/promise.js:569:18)
+2018-07-02T01:32:41.494843+00:00 app[web.1]: at Promise._settlePromise0 (/app/node_modules/bluebird/js/release/promise.js:614:10)
+2018-07-02T01:32:41.494845+00:00 app[web.1]: at Promise._settlePromises (/app/node_modules/bluebird/js/release/promise.js:689:18)
+2018-07-02T01:32:41.494847+00:00 app[web.1]: at Async._drainQueue (/app/node_modules/bluebird/js/release/async.js:133:16)
+2018-07-02T01:32:41.494848+00:00 app[web.1]: at Async._drainQueues (/app/node_modules/bluebird/js/release/async.js:143:10)
+2018-07-02T01:32:41.494850+00:00 app[web.1]: at Immediate.Async.drainQueues (/app/node_modules/bluebird/js/release/async.js:17:14)
+2018-07-02T01:32:41.494852+00:00 app[web.1]: at runCallback (timers.js:810:20)
+2018-07-02T01:32:41.494853+00:00 app[web.1]: at tryOnImmediate (timers.js:768:5)
+2018-07-02T01:32:41.494855+00:00 app[web.1]: at processImmediate [as _immediateCallback] (timers.js:745:5)
+2018-07-02T01:32:51.562651+00:00 heroku[web.1]: Process exited with status 0
+2018-07-02T01:32:51.589881+00:00 heroku[web.1]: State changed from starting to crashed
+2018-07-02T01:32:58.704405+00:00 app[api]: Release v17 created by user dan.kubiak@gmail.com
+2018-07-02T01:32:58.704405+00:00 app[api]: Set client_x509_cert_url config vars by user dan.kubiak@gmail.com
+2018-07-02T01:32:59.064550+00:00 heroku[web.1]: State changed from crashed to starting
+2018-07-02T01:33:03.780726+00:00 heroku[web.1]: Starting process with command `npm start`
+2018-07-02T01:33:06.113424+00:00 app[web.1]: 
+2018-07-02T01:33:06.113455+00:00 app[web.1]: > cobrakai@1.0.0 start /app
+2018-07-02T01:33:06.113457+00:00 app[web.1]: > node server.js
+2018-07-02T01:33:06.113459+00:00 app[web.1]: 
+2018-07-02T01:33:06.743819+00:00 app[web.1]: Directory Name /app/models
+2018-07-02T01:33:07.729232+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:33:07.729403+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+2018-07-02T01:33:07.729484+00:00 app[web.1]: (node:20) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+2018-07-02T01:33:07.729530+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:33:07.729592+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)
+2018-07-02T01:33:07.729663+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:33:07.729701+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 3)
+2018-07-02T01:33:07.729748+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:33:07.729841+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 4)
+2018-07-02T01:33:07.729870+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:33:07.730036+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 5)
+2018-07-02T01:33:07.730132+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:33:07.730243+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 6)
+2018-07-02T01:33:07.752487+00:00 app[web.1]: at Utils.Promise.tap.then.catch.err (/app/node_modules/sequelize/lib/dialects/mysql/connection-manager.js:139:19)
+2018-07-02T01:33:07.752484+00:00 app[web.1]: Unhandled rejection SequelizeConnectionRefusedError: connect ECONNREFUSED 127.0.0.1:3306
+2018-07-02T01:33:07.752489+00:00 app[web.1]: at tryCatcher (/app/node_modules/bluebird/js/release/util.js:16:23)
+2018-07-02T01:33:07.752491+00:00 app[web.1]: at Promise._settlePromiseFromHandler (/app/node_modules/bluebird/js/release/promise.js:512:31)
+2018-07-02T01:33:07.752493+00:00 app[web.1]: at Promise._settlePromise (/app/node_modules/bluebird/js/release/promise.js:569:18)
+2018-07-02T01:33:07.752495+00:00 app[web.1]: at Promise._settlePromise0 (/app/node_modules/bluebird/js/release/promise.js:614:10)
+2018-07-02T01:33:07.752497+00:00 app[web.1]: at Promise._settlePromises (/app/node_modules/bluebird/js/release/promise.js:689:18)
+2018-07-02T01:33:07.752500+00:00 app[web.1]: at Async._drainQueues (/app/node_modules/bluebird/js/release/async.js:143:10)
+2018-07-02T01:33:07.752499+00:00 app[web.1]: at Async._drainQueue (/app/node_modules/bluebird/js/release/async.js:133:16)
+2018-07-02T01:33:07.752501+00:00 app[web.1]: at Immediate.Async.drainQueues (/app/node_modules/bluebird/js/release/async.js:17:14)
+2018-07-02T01:33:07.752504+00:00 app[web.1]: at runCallback (timers.js:810:20)
+2018-07-02T01:33:07.752505+00:00 app[web.1]: at tryOnImmediate (timers.js:768:5)
+2018-07-02T01:33:07.752507+00:00 app[web.1]: at processImmediate [as _immediateCallback] (timers.js:745:5)
+2018-07-02T01:33:17.832702+00:00 heroku[web.1]: Process exited with status 0
+2018-07-02T01:33:17.860259+00:00 heroku[web.1]: State changed from starting to crashed
+2018-07-02T01:41:39.154275+00:00 heroku[web.1]: State changed from crashed to starting
+2018-07-02T01:41:44.266085+00:00 heroku[web.1]: Starting process with command `npm start`
+2018-07-02T01:41:47.095384+00:00 app[web.1]: 
+2018-07-02T01:41:47.095410+00:00 app[web.1]: > cobrakai@1.0.0 start /app
+2018-07-02T01:41:47.095412+00:00 app[web.1]: > node server.js
+2018-07-02T01:41:47.095414+00:00 app[web.1]: 
+2018-07-02T01:41:48.066933+00:00 app[web.1]: Directory Name /app/models
+2018-07-02T01:41:49.365078+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:41:49.365254+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+2018-07-02T01:41:49.365379+00:00 app[web.1]: (node:20) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+2018-07-02T01:41:49.365440+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:41:49.365544+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)
+2018-07-02T01:41:49.365602+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:41:49.365725+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 3)
+2018-07-02T01:41:49.365818+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:41:49.365922+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 4)
+2018-07-02T01:41:49.365993+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:41:49.366076+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 5)
+2018-07-02T01:41:49.366145+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T01:41:49.366226+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 6)
+2018-07-02T01:41:49.393848+00:00 app[web.1]: Unhandled rejection SequelizeConnectionRefusedError: connect ECONNREFUSED 127.0.0.1:3306
+2018-07-02T01:41:49.393852+00:00 app[web.1]: at Utils.Promise.tap.then.catch.err (/app/node_modules/sequelize/lib/dialects/mysql/connection-manager.js:139:19)
+2018-07-02T01:41:49.393855+00:00 app[web.1]: at tryCatcher (/app/node_modules/bluebird/js/release/util.js:16:23)
+2018-07-02T01:41:49.393857+00:00 app[web.1]: at Promise._settlePromiseFromHandler (/app/node_modules/bluebird/js/release/promise.js:512:31)
+2018-07-02T01:41:49.393858+00:00 app[web.1]: at Promise._settlePromise (/app/node_modules/bluebird/js/release/promise.js:569:18)
+2018-07-02T01:41:49.393860+00:00 app[web.1]: at Promise._settlePromise0 (/app/node_modules/bluebird/js/release/promise.js:614:10)
+2018-07-02T01:41:49.393862+00:00 app[web.1]: at Promise._settlePromises (/app/node_modules/bluebird/js/release/promise.js:689:18)
+2018-07-02T01:41:49.393863+00:00 app[web.1]: at Async._drainQueue (/app/node_modules/bluebird/js/release/async.js:133:16)
+2018-07-02T01:41:49.393865+00:00 app[web.1]: at Async._drainQueues (/app/node_modules/bluebird/js/release/async.js:143:10)
+2018-07-02T01:41:49.393866+00:00 app[web.1]: at Immediate.Async.drainQueues (/app/node_modules/bluebird/js/release/async.js:17:14)
+2018-07-02T01:41:49.393868+00:00 app[web.1]: at runCallback (timers.js:810:20)
+2018-07-02T01:41:49.393872+00:00 app[web.1]: at processImmediate [as _immediateCallback] (timers.js:745:5)
+2018-07-02T01:41:49.393871+00:00 app[web.1]: at tryOnImmediate (timers.js:768:5)
+2018-07-02T01:41:59.513990+00:00 heroku[web.1]: Process exited with status 0
+2018-07-02T01:41:59.538370+00:00 heroku[web.1]: State changed from starting to crashed
+2018-07-02T02:08:42.226442+00:00 heroku[web.1]: State changed from crashed to starting
+2018-07-02T02:08:49.164446+00:00 heroku[web.1]: Starting process with command `npm start`
+2018-07-02T02:08:51.667326+00:00 app[web.1]: 
+2018-07-02T02:08:51.667377+00:00 app[web.1]: > cobrakai@1.0.0 start /app
+2018-07-02T02:08:51.667400+00:00 app[web.1]: > node server.js
+2018-07-02T02:08:51.667402+00:00 app[web.1]: 
+2018-07-02T02:08:52.306053+00:00 app[web.1]: Directory Name /app/models
+2018-07-02T02:08:53.204663+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T02:08:53.204798+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+2018-07-02T02:08:53.204889+00:00 app[web.1]: (node:20) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+2018-07-02T02:08:53.204966+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T02:08:53.205044+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)
+2018-07-02T02:08:53.205112+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T02:08:53.205196+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 3)
+2018-07-02T02:08:53.205260+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T02:08:53.205402+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T02:08:53.205340+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 4)
+2018-07-02T02:08:53.205473+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 5)
+2018-07-02T02:08:53.205536+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, open '/app/VidWall-e4a178d8b757.json'
+2018-07-02T02:08:53.205610+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 6)
+2018-07-02T02:08:53.225859+00:00 app[web.1]: Unhandled rejection SequelizeConnectionRefusedError: connect ECONNREFUSED 127.0.0.1:3306
+2018-07-02T02:08:53.225863+00:00 app[web.1]: at Utils.Promise.tap.then.catch.err (/app/node_modules/sequelize/lib/dialects/mysql/connection-manager.js:139:19)
+2018-07-02T02:08:53.225868+00:00 app[web.1]: at tryCatcher (/app/node_modules/bluebird/js/release/util.js:16:23)
+2018-07-02T02:08:53.225871+00:00 app[web.1]: at Promise._settlePromiseFromHandler (/app/node_modules/bluebird/js/release/promise.js:512:31)
+2018-07-02T02:08:53.225872+00:00 app[web.1]: at Promise._settlePromise (/app/node_modules/bluebird/js/release/promise.js:569:18)
+2018-07-02T02:08:53.225874+00:00 app[web.1]: at Promise._settlePromise0 (/app/node_modules/bluebird/js/release/promise.js:614:10)
+2018-07-02T02:08:53.225876+00:00 app[web.1]: at Promise._settlePromises (/app/node_modules/bluebird/js/release/promise.js:689:18)
+2018-07-02T02:08:53.225877+00:00 app[web.1]: at Async._drainQueue (/app/node_modules/bluebird/js/release/async.js:133:16)
+2018-07-02T02:08:53.225879+00:00 app[web.1]: at Async._drainQueues (/app/node_modules/bluebird/js/release/async.js:143:10)
+2018-07-02T02:08:53.225880+00:00 app[web.1]: at Immediate.Async.drainQueues (/app/node_modules/bluebird/js/release/async.js:17:14)
+2018-07-02T02:08:53.225881+00:00 app[web.1]: at runCallback (timers.js:810:20)
+2018-07-02T02:08:53.225884+00:00 app[web.1]: at processImmediate [as _immediateCallback] (timers.js:745:5)
+2018-07-02T02:08:53.225882+00:00 app[web.1]: at tryOnImmediate (timers.js:768:5)
+2018-07-02T02:09:03.335022+00:00 heroku[web.1]: Process exited with status 0
+2018-07-02T02:09:03.355109+00:00 heroku[web.1]: State changed from starting to crashed
+2018-07-02T02:35:42.000000+00:00 app[api]: Build started by user dan.kubiak@gmail.com
+2018-07-02T02:36:00.073887+00:00 heroku[web.1]: State changed from crashed to starting
+2018-07-02T02:35:59.860804+00:00 app[api]: Release v18 created by user dan.kubiak@gmail.com
+2018-07-02T02:35:59.860804+00:00 app[api]: Deploy 1a14af7c by user dan.kubiak@gmail.com
+2018-07-02T02:36:04.000000+00:00 app[api]: Build succeeded
+2018-07-02T02:36:24.126021+00:00 heroku[web.1]: Starting process with command `npm start`
+2018-07-02T02:36:28.205022+00:00 app[web.1]: 
+2018-07-02T02:36:28.205038+00:00 app[web.1]: > cobrakai@1.0.0 start /app
+2018-07-02T02:36:28.205039+00:00 app[web.1]: > node server.js
+2018-07-02T02:36:28.205041+00:00 app[web.1]: 
+2018-07-02T02:36:31.316624+00:00 app[web.1]: Directory Name /app/models
+2018-07-02T02:36:34.348337+00:00 app[web.1]: /app/routes/api-routes.js:13
+2018-07-02T02:36:34.348364+00:00 app[web.1]: private_key: private_key.process.env,
+2018-07-02T02:36:34.348366+00:00 app[web.1]: ^
+2018-07-02T02:36:34.348367+00:00 app[web.1]: 
+2018-07-02T02:36:34.348371+00:00 app[web.1]: at Object.<anonymous> (/app/routes/api-routes.js:13:18)
+2018-07-02T02:36:34.348369+00:00 app[web.1]: ReferenceError: private_key is not defined
+2018-07-02T02:36:34.348373+00:00 app[web.1]: at Module._compile (module.js:652:30)
+2018-07-02T02:36:34.348374+00:00 app[web.1]: at Object.Module._extensions..js (module.js:663:10)
+2018-07-02T02:36:34.348376+00:00 app[web.1]: at Module.load (module.js:565:32)
+2018-07-02T02:36:34.348377+00:00 app[web.1]: at tryModuleLoad (module.js:505:12)
+2018-07-02T02:36:34.348379+00:00 app[web.1]: at Function.Module._load (module.js:497:3)
+2018-07-02T02:36:34.348381+00:00 app[web.1]: at Module.require (module.js:596:17)
+2018-07-02T02:36:34.348383+00:00 app[web.1]: at require (internal/module.js:11:18)
+2018-07-02T02:36:34.348384+00:00 app[web.1]: at Object.<anonymous> (/app/server.js:27:1)
+2018-07-02T02:36:34.348386+00:00 app[web.1]: at Module._compile (module.js:652:30)
+2018-07-02T02:36:34.348388+00:00 app[web.1]: at Object.Module._extensions..js (module.js:663:10)
+2018-07-02T02:36:34.348389+00:00 app[web.1]: at Module.load (module.js:565:32)
+2018-07-02T02:36:34.348391+00:00 app[web.1]: at tryModuleLoad (module.js:505:12)
+2018-07-02T02:36:34.348392+00:00 app[web.1]: at Function.Module._load (module.js:497:3)
+2018-07-02T02:36:34.348395+00:00 app[web.1]: at Function.Module.runMain (module.js:693:10)
+2018-07-02T02:36:34.348396+00:00 app[web.1]: at startup (bootstrap_node.js:191:16)
+2018-07-02T02:36:34.348398+00:00 app[web.1]: at bootstrap_node.js:612:3
+2018-07-02T02:36:34.416640+00:00 app[web.1]: npm ERR! code ELIFECYCLE
+2018-07-02T02:36:34.417486+00:00 app[web.1]: npm ERR! errno 1
+2018-07-02T02:36:34.426823+00:00 app[web.1]: npm ERR! cobrakai@1.0.0 start: `node server.js`
+2018-07-02T02:36:34.429435+00:00 app[web.1]: npm ERR! Exit status 1
+2018-07-02T02:36:34.431422+00:00 app[web.1]: npm ERR!
+2018-07-02T02:36:34.431686+00:00 app[web.1]: npm ERR! Failed at the cobrakai@1.0.0 start script.
+2018-07-02T02:36:34.432282+00:00 app[web.1]: npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+2018-07-02T02:36:34.479341+00:00 app[web.1]: 
+2018-07-02T02:36:34.483223+00:00 app[web.1]: npm ERR! A complete log of this run can be found in:
+2018-07-02T02:36:34.484254+00:00 app[web.1]: npm ERR!     /app/.npm/_logs/2018-07-02T02_36_34_450Z-debug.log
+2018-07-02T02:36:34.577804+00:00 heroku[web.1]: Process exited with status 1
+2018-07-02T02:36:34.594268+00:00 heroku[web.1]: State changed from starting to crashed
+2018-07-02T02:36:34.596313+00:00 heroku[web.1]: State changed from crashed to starting
+2018-07-02T02:36:38.798288+00:00 heroku[web.1]: Starting process with command `npm start`
+2018-07-02T02:36:41.250565+00:00 app[web.1]: 
+2018-07-02T02:36:41.250584+00:00 app[web.1]: > cobrakai@1.0.0 start /app
+2018-07-02T02:36:41.250586+00:00 app[web.1]: > node server.js
+2018-07-02T02:36:41.250588+00:00 app[web.1]: 
+2018-07-02T02:36:41.856382+00:00 app[web.1]: Directory Name /app/models
+2018-07-02T02:36:42.629444+00:00 app[web.1]: /app/routes/api-routes.js:13
+2018-07-02T02:36:42.629459+00:00 app[web.1]: private_key: private_key.process.env,
+2018-07-02T02:36:42.629461+00:00 app[web.1]: ^
+2018-07-02T02:36:42.629463+00:00 app[web.1]: 
+2018-07-02T02:36:42.629464+00:00 app[web.1]: ReferenceError: private_key is not defined
+2018-07-02T02:36:42.629467+00:00 app[web.1]: at Object.<anonymous> (/app/routes/api-routes.js:13:18)
+2018-07-02T02:36:42.629469+00:00 app[web.1]: at Module._compile (module.js:652:30)
+2018-07-02T02:36:42.629471+00:00 app[web.1]: at Object.Module._extensions..js (module.js:663:10)
+2018-07-02T02:36:42.629472+00:00 app[web.1]: at Module.load (module.js:565:32)
+2018-07-02T02:36:42.629474+00:00 app[web.1]: at tryModuleLoad (module.js:505:12)
+2018-07-02T02:36:42.629475+00:00 app[web.1]: at Function.Module._load (module.js:497:3)
+2018-07-02T02:36:42.629477+00:00 app[web.1]: at Module.require (module.js:596:17)
+2018-07-02T02:36:42.629479+00:00 app[web.1]: at require (internal/module.js:11:18)
+2018-07-02T02:36:42.629480+00:00 app[web.1]: at Object.<anonymous> (/app/server.js:27:1)
+2018-07-02T02:36:42.629482+00:00 app[web.1]: at Module._compile (module.js:652:30)
+2018-07-02T02:36:42.629483+00:00 app[web.1]: at Object.Module._extensions..js (module.js:663:10)
+2018-07-02T02:36:42.629485+00:00 app[web.1]: at Module.load (module.js:565:32)
+2018-07-02T02:36:42.629487+00:00 app[web.1]: at tryModuleLoad (module.js:505:12)
+2018-07-02T02:36:42.629488+00:00 app[web.1]: at Function.Module._load (module.js:497:3)
+2018-07-02T02:36:42.629490+00:00 app[web.1]: at Function.Module.runMain (module.js:693:10)
+2018-07-02T02:36:42.629491+00:00 app[web.1]: at startup (bootstrap_node.js:191:16)
+2018-07-02T02:36:42.629492+00:00 app[web.1]: at bootstrap_node.js:612:3
+2018-07-02T02:36:42.640882+00:00 app[web.1]: npm ERR! code ELIFECYCLE
+2018-07-02T02:36:42.641386+00:00 app[web.1]: npm ERR! errno 1
+2018-07-02T02:36:42.642732+00:00 app[web.1]: npm ERR! cobrakai@1.0.0 start: `node server.js`
+2018-07-02T02:36:42.642889+00:00 app[web.1]: npm ERR! Exit status 1
+2018-07-02T02:36:42.643111+00:00 app[web.1]: npm ERR!
+2018-07-02T02:36:42.643276+00:00 app[web.1]: npm ERR! Failed at the cobrakai@1.0.0 start script.
+2018-07-02T02:36:42.643472+00:00 app[web.1]: npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+2018-07-02T02:36:42.653251+00:00 app[web.1]: 
+2018-07-02T02:36:42.653573+00:00 app[web.1]: npm ERR! A complete log of this run can be found in:
+2018-07-02T02:36:42.653791+00:00 app[web.1]: npm ERR!     /app/.npm/_logs/2018-07-02T02_36_42_645Z-debug.log
+2018-07-02T02:36:42.709660+00:00 heroku[web.1]: Process exited with status 1
+2018-07-02T02:36:42.724776+00:00 heroku[web.1]: State changed from starting to crashed
+2018-07-02T02:36:43.534980+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=face-detection6969.herokuapp.com request_id=bec074dd-192f-4306-9506-ef213aeb7265 fwd="76.89.239.212" dyno= connect= service= status=503 bytes= protocol=https
+2018-07-02T02:36:44.624211+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=face-detection6969.herokuapp.com request_id=266de9b4-23fc-4187-a1cc-4bd30b095c65 fwd="76.89.239.212" dyno= connect= service= status=503 bytes= protocol=https
+2018-07-02T02:36:59.709327+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=face-detection6969.herokuapp.com request_id=54fc809f-bb47-4240-b577-c96320a1b7ca fwd="76.89.239.212" dyno= connect= service= status=503 bytes= protocol=https
+2018-07-02T02:37:00.312070+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=face-detection6969.herokuapp.com request_id=c7f2c325-a560-41c0-b396-ae5c1bedf183 fwd="76.89.239.212" dyno= connect= service= status=503 bytes= protocol=https
+2018-07-02T02:42:15.858100+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=face-detection6969.herokuapp.com request_id=c40b0d1e-38b7-48e8-bb81-a7164331a70d fwd="76.89.239.212" dyno= connect= service= status=503 bytes= protocol=https
+2018-07-02T02:42:16.527793+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=face-detection6969.herokuapp.com request_id=9edf97ba-8175-4198-b087-1de8afb28300 fwd="76.89.239.212" dyno= connect= service= status=503 bytes= protocol=https
+2018-07-02T02:42:47.587643+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=face-detection6969.herokuapp.com request_id=16b3bb70-bc99-49f7-b5c8-88ffd4cee352 fwd="76.89.239.212" dyno= connect= service= status=503 bytes= protocol=https
+2018-07-02T02:42:49.206634+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=face-detection6969.herokuapp.com request_id=dac2c7f6-ec4b-45d5-9ff4-9251e94a72db fwd="76.89.239.212" dyno= connect= service= status=503 bytes= protocol=https

@@ -5,6 +5,7 @@ let myResult = {
     arr2: [],
     arr3: []
 };
+require("dotenv").config()
 const vision = require('@google-cloud/vision');
 const client = new vision.ImageAnnotatorClient({   //keyFilename: "./VidWall-e4a178d8b757.json"
     type: process.env.type,
