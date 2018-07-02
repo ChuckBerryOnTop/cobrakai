@@ -10,8 +10,8 @@ var fs = require('fs');
 
 //https
 var key = fs.readFileSync('./private.key');
-var cert = fs.readFileSync( './mydomain.crs' );
-var ca = fs.readFileSync( './mydomain.crs' );
+var cert = fs.readFileSync( './mydomain.csr' );
+var ca = fs.readFileSync( './mydomain.csr' );
 
 //
 var options = {
