@@ -24,6 +24,7 @@ module.exports = (app) => {
             arr3: []
         }
 
+        //For the image save
         const imgFix1 = myRequest.replace(/data:image\/png;base64,/gi, "")
         let img1 = new Buffer(imgFix1, 'base64');
         require('fs').writeFile("./images/imageMain.png", img1, function () {
@@ -73,7 +74,7 @@ module.exports = (app) => {
             res.json(results);
         })
     });
-    
+
     //This is needed to serve the images
     app.get("/images/:id", function (req, res) {
         var name = req.params.id;
