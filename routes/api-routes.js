@@ -64,10 +64,6 @@ module.exports = (app) => {
             })
     });
 
-    // app.get("/api/logo", function(req, res) {             
-    //     console.log("Res2: "+JSON.stringify(myResult))
-    //     return res.json(myResult);
-    // }); 
 
     app.get("/api/logo", function (req, res) {
         db.Classify.findAll({}).then(function (results) {

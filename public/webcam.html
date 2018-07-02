@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>Bootstrap Example</title>
   <meta charset="utf-8">
@@ -8,132 +9,153 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style>
-    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    /* Remove the navbar's default margin-bottom and rounded borders */
+
     .navbar {
       margin-bottom: 0;
       border-radius: 0;
     }
-    
+
     /* Add a gray background color and some padding to the footer */
+
     footer {
       background-color: #f2f2f2;
       padding: 25px;
     }
-    
-  #myCanvas {
-    display: none;
-  }
-  #videoElement {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 40%;
-  }
-#theScreen {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 40%;
-  }
 
-  #photos {
-  /* Prevent vertical gaps */
-  line-height: 0;
-   
-  -webkit-column-count: 5;
-  -webkit-column-gap:   0px;
-  -moz-column-count:    5;
-  -moz-column-gap:      0px;
-  column-count:         5;
-  column-gap:           0px;  
-  width: auto;
+    #myCanvas {
+      display: none;
+    }
 
-}
+    #videoElement {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 40%;
+    }
 
-#photos img {
-  /* Just in case there are inline attributes */
-  width: 100%!important;
-  height: auto !important;
-}
- 
+    #theScreen {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 40%;
+    }
 
+    #photos {
+      /* Prevent vertical gaps */
+      line-height: 0;
 
+      -webkit-column-count: 5;
+      -webkit-column-gap: 0px;
+      -moz-column-count: 5;
+      -moz-column-gap: 0px;
+      column-count: 5;
+      column-gap: 0px;
+      width: auto;
+
+    }
+
+    #photos img {
+      /* Just in case there are inline attributes */
+      width: 100%!important;
+      height: auto !important;
+    }
   </style>
 </head>
+
 <body>
 
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="#">Logo</a>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Logo</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li class="active">
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#">About</a>
+          </li>
+          <li>
+            <a href="#">Projects</a>
+          </li>
+          <li>
+            <a href="#">Contact</a>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="#">
+              <span class="glyphicon glyphicon-log-in"></span> Login</a>
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+  </nav>
 
 
-<div class="jumbotron jumbotron-fluid">
-  <div id="container">
+  <div class="jumbotron jumbotron-fluid">
+    <div id="container">
       <video autoplay="true" id="videoElement">
-       
+
       </video>
+    </div>
+    <div class="row">
+      <div class="col-sm-4"></div>
+      <div class="col-sm-4">
+        <canvas id="myCanvas" width="400" height="350"></canvas>
+        <button id="snap" onclick="snapshot()" button type="button" class="btn btn-dark">Snapshot</button>
+        <button id="cam" onclick="startCam()" button type="button" class="btn btn-dark">Camera</button>
+        <button id="close" onclick="close()" button type="button" class="btn btn-dark">Close</button>
+      </div>
+      <div class="col-sm-4"></div>
+    </div>
+
   </div>
-  <canvas  id="myCanvas" width="400" height="350"></canvas>
- 
-<button id="snap" onclick="snapshot()" button type="button" class="btn btn-dark">Snapshot</button>
-
-<button id="cam" onclick="startCam()" button type="button" class="btn btn-dark">Camera</button>
-
-<button id="close" onclick="close()" button type="button" class="btn btn-dark">Close</button>
 
 
-</div>
-
-  
-<div class="container text-center">    
-  <h3><p id='api-result'>*LABELS APPEAR HERE*</p></h3><br>
-  <div class="row">
-    <div class="col-md-3">
-      <p id="api-result2">box 1</p>
+  <div class="container text-center">
+    <h3>
+      <p id='api-result'>Image Analysis</p>
+    </h3>
+    <br>
+    <div class="row">
+      <div class="col-md-6">
+        <p id="api-result2">box 1</p>
+      </div>
+      <div class="col-md-6">
+        <p id="api-result3">box 2</p>
+      </div>
     </div>
-    <div class="col-md-3">
-      <p id="api-result3">box 2</p>
+    <div class="row">
+      <div class="col-sm-12">
+        <section id="photos">
+          <h4 id="faceTag"></h4>
+        </section>
+      </div>
     </div>
-    <div class="col-sm-4">
-      <h4 id="faceTag"></h4>
-      <section id="photos" >
-        
-      </section>
-    </div>
-    <div class="col-md-3">
-      <p>box 4</p>
-    </div>
-  </div>
-  <div class="history row">
-    <p>History Goes Here</p>
-    <button type="button" class="btn btn-primary btn-lg btn-block dbHistory">Block level button</button>
-  </div>
-</div><br>
 
-<footer class="container-fluid text-center">
-  <p>Footer Text</p>
-</footer>
+    <div class="row">
+      <div class="col-sm-12">
+        <button type="button" class="btn btn-primary btn-lg btn-block dbHistory">View Search History</button>
+        <div class="history"></div>
+        <div></div>
+      </div>
+    </div>
+    <br>
 
-<script src='./js/webcam.js'></script>   
+    <footer class="container-fluid text-center">
+      <p>ChuckBerry-on-Top@Design</p>
+    </footer>
+
+    <script src='./js/webcam.js'></script>
 </body>
+
 </html>

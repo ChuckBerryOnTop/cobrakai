@@ -175,32 +175,7 @@ function apiResponse() {
     });
     $('#snap').show();
 
-
-    $.get("/display", function(data) {
-        //const image = new Image()
-
-        //$('#img').html('<img src="'+data+'">');
-      /*  console.log(data);
-       // var b64Response = btoa(unescape((data)));
-        var b64Response = btoa(unescape(encodeURIComponent(data)))
-        //var decode = decodeURIComponent(escape(window.atob(b64Response)));
-        var image = new Image();
-        image.src = 'data:image/png;base64,'+b64Response;
-        document.body.appendChild(image);*/
-       /* function b64DecodeUnicode(str) {
-            return decodeURIComponent(Array.prototype.map.call(atob(str), function(c) {
-                return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2)
-            }).join(''))
-        }
-        var imgsrc = 'data:image/svg+xml;base64,' + btoa(unescape(encodeURIComponent(data)));
-        var img = new Image(1, 1); // width, height values are optional params 
-        img.src = imgsrc;
-        document.body.appendChild(img);*/
-        //var b64Response = btoa(unescape((data)));
-        var image = new Image();
-        image.src = 'data:image/png;base64,'+data;
-        document.body.appendChild(image);
-    });    
+   
 } 
 
 ////// click button for history check it out
@@ -211,7 +186,7 @@ $(".dbHistory").on("click", function(event) {
         $('.history').text("");
         for (let i = 0; i < data.length; i++) {
     
-          var div = $("<div style='background:blue;'></div>")
+          var div = $("<div style='background:yellow;'></div>")
           var row = $("<div>");
           row.append('<img src="' + data[i].file + '" alt="">');
           row.addClass("lineItem");
