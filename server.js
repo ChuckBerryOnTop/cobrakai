@@ -6,7 +6,6 @@ const bodyParser = require("body-parser");
 const app = express();
 const PORT = process.env.PORT || 8080;
 
-var express = require('express');
 var app = express();
 var fs = require('fs');
 
