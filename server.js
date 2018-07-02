@@ -20,7 +20,7 @@ var options = {
   };
 
 var https = require('https');
-https.createServer(options, app);
+
 
 
 // Requiring our models for syncing
@@ -56,9 +56,10 @@ require("./routes/html-routes.js")(app);
 //   });
 
 db.sequelize.sync({ force: true }).then(function() {
-  app.listen(443, function() {
-    console.log("App listening on PORT " + PORT);
-  });
+  // app.listen(443, function() {
+  //   console.log("App listening on PORT " + PORT);
+  // });
+  https.createServer(options, app).listen(443);
 });
 // app.listen(PORT, function() {
 //   // Log (server-side) when our server has started
