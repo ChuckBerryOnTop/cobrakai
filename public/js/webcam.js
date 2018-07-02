@@ -133,7 +133,7 @@ function snapshot() {
         console.log(img);
         $('#photos').text("");
         if (count > 0) {
-          $('#faceTag').text('Face '+count+' Detected');
+          $('#faceTag').text(count+' face '+' Detected');
           let arr = response.imgUrls;
           for (var ii = 0; ii < count; ii++) {
             console.log(arr[ii]);
