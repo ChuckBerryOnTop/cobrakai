@@ -6,8 +6,17 @@ let myResult = {
     arr3: []
 };
 const vision = require('@google-cloud/vision');
-const client = new vision.ImageAnnotatorClient({
-    keyFilename: "./VidWall-e4a178d8b757.json"
+const client = new vision.ImageAnnotatorClient({   //keyFilename: "./VidWall-e4a178d8b757.json"
+    type: process.env.type,
+    project_id: process.env.project_id.process,
+    private_key_id: process.env.private_key_id,
+    private_key: private_key.process.env,
+    client_email: process.env.client_email,
+    client_id: process.env.client_id,
+    auth_uri: process.env.auth_uri,
+    token_uri: process.env.token_uri,
+    auth_provider_x509_cert_url: process.env.auth_provider_x509_cert_url,
+    client_x509_cert_url: process.env.client_x509_cert_url
 });
 
 let wiki;

@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "root",
-    "password": "root",
-    "database": "logoDB",
-    "host": "127.0.0.1",
+    "username": "fztz71fkacc1dcet",
+    "password": "puo6vg7rc082qyrv",
+    "database": "j6lq6nqkrvn7oooe",
+    "host": "o677vxfi8ok6exrd.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql",
     "operatorsAliases": false
   },
