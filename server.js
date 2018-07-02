@@ -11,7 +11,7 @@ var fs = require('fs');
 //https
 var key = fs.readFileSync('./private.key');
 var cert = fs.readFileSync( './primary.crt' );
-var ca = fs.readFileSync( './intermediate.crt' );
+var ca = fs.readFileSync( './mydomain.crt' );
 
 //
 var options = {
