@@ -84,56 +84,6 @@ function init() {
   ctx = canvas.getContext('2d');
 }
 
-// function snapshot() {
-//   $('#snap').hide();
-
-//   canvas = document.getElementById("myCanvas");
-//   ctx = canvas.getContext('2d');
-//   ctx.drawImage(vid, 0, 0, canvas.width, canvas.height);
-//   dataURL = canvas.toDataURL('image/png');
-//   //console.log(dataURL);
-//   const dataSent = {
-//     key: dataURL
-//   }
-//   $.post("/api/logo", dataSent,
-//     function (data, status) {
-
-//     })
-//   setTimeout(apiResponse, 5000);
-//   function apiResponse() {
-//     $.get("/api/logo", function (data) {
-//       console.log("res");
-//       console.log(data)
-//       $('#api-result').text(data.arr1);
-//       $('#api-result2').text(data.arr2);
-
-//     }).then(function () {
-//       $.get("/api/faceUrl", function (data) {
-//         let response = JSON.parse(data);
-//         console.log(response);
-//         let count = response.faceCount;
-//         console.log(count);
-//         let img = response.imgUrls;
-//         console.log(img);
-//         $('#photos').text("");
-//         if (count > 0) {
-//           $('#faceTag').text('Face '+count+' Detected');
-//           for (var ii = 0; ii < count; ii++) {
-//             var arr = response.imgUrls;
-//             console.log(arr[ii]);
-//             displayImageFaces(arr[ii], 1);
-//           }
-//         }
-//         else{
-//           $('#faceTag').text('No Face Detected');
-//         }
-//       });
-
-//     });
-//   }
-//   $('#snap').show();
-// }
-
 
 function snapshot() { 
   $('#snap').hide();   
@@ -258,7 +208,7 @@ $(".dbHistory").on("click", function(event) {
     event.preventDefault();
     $.get("/api/logo", function(data) {
       if (data.length !== 0) {
-    
+        $('.history').text("");
         for (let i = 0; i < data.length; i++) {
     
           var div = $("<div style='background:blue;'></div>")
