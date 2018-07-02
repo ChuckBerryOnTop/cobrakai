@@ -9,9 +9,9 @@ const PORT = process.env.PORT || 8080;
 var fs = require('fs');
 
 //https
-var key = fs.readFileSync('encryption/private.key');
-var cert = fs.readFileSync( 'encryption/primary.crt' );
-var ca = fs.readFileSync( 'encryption/intermediate.crt' );
+var key = fs.readFileSync('./private.key');
+var cert = fs.readFileSync( './primary.crt' );
+var ca = fs.readFileSync( './intermediate.crt' );
 
 //
 var options = {
