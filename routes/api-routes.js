@@ -35,7 +35,7 @@ module.exports = (app) => {
             myResult.arr1 = await myVision(fileName);
             myResult.arr2 = await myVision2(fileName);
             myResult.arr3 = await myVision4(fileName);
-            create(myResult.arr1[0], myResult.arr1[1], myResult.arr2[0], myResult.arr3[0], fileName)
+            create(myResult.arr1[0], myResult.arr1[1], myResult.arr2[0], myResult.arr3[0], "./images/"+fileName + '.png')
             console.log("myResult: " + JSON.stringify(myResult));
             res.json(myResult)
         }
@@ -45,7 +45,7 @@ module.exports = (app) => {
             let img = new Buffer(imgFix, 'base64');
             const fileName = 'a-img' + rnd() + rnd() + rnd();
 
-
+            require('fs').writeFile("./images/"+fileName + '.png', img, function (){});
             require('fs').writeFile("./" + fileName + '.png', img, function () {
                 console.log('FILE SAVED AS: ' + fileName + '.png');
                 resolve(fileName + '.png');
