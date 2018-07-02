@@ -6,6 +6,26 @@ const bodyParser = require("body-parser");
 const app = express();
 const PORT = process.env.PORT || 8080;
 
+var express = require('express');
+var app = express();
+var fs = require('fs');
+
+//https
+var key = fs.readFileSync('encryption/private.key');
+var cert = fs.readFileSync( 'encryption/primary.crt' );
+var ca = fs.readFileSync( 'encryption/intermediate.crt' );
+
+//
+var options = {
+  key: key,
+  cert: cert,
+  ca: ca
+  };
+
+var https = require('https');
+https.createServer(options, app).listen(443);
+
+
 // Requiring our models for syncing
 const db = require("./models/index.js");
 
