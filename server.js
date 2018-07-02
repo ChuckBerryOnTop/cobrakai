@@ -16,8 +16,7 @@ var ca = fs.readFileSync( './mydomain.csr' );
 //
 var options = {
   key: key,
-  cert: cert,
-  ca: ca
+  cert: cert
   };
 
 var https = require('https');
