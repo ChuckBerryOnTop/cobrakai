@@ -9,9 +9,9 @@ const PORT = process.env.PORT || 8080;
 var fs = require('fs');
 
 //https
-var key = fs.readFileSync('./private.key');
-var cert = fs.readFileSync( './mydomain.csr' );
-var ca = fs.readFileSync( './mydomain.csr' );
+var key = fs.readFileSync('./selfsigned.key');
+var cert = fs.readFileSync( './selfsigned.crt' );
+//var ca = fs.readFileSync( './mydomain.csr' );
 
 //
 var options = {
