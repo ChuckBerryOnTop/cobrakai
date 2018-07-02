@@ -2,7 +2,7 @@ let myRequest;
 const path = require("path");
 
 //let myResult = [];
-let myResult = {arr1:[], arr2:[], arr3:[]};
+let myResult = { arr1: [], arr2: [], arr3: [] };
 const vision = require('@google-cloud/vision');
 const client = new vision.ImageAnnotatorClient({
     keyFilename: "./VidWall-e4a178d8b757.json"
@@ -15,8 +15,8 @@ const db = require("../models");
 var imageFaceHelper = require("../models/detect.js");
 
 
-module.exports = (app) => {    
-    app.post("/api/logo", (req, res) => {    
+module.exports = (app) => {
+    app.post("/api/logo", (req, res) => {
         myRequest = req.body.key
         myResult = {
             arr1: [],
@@ -24,13 +24,13 @@ module.exports = (app) => {
             arr3: []
         }
 
-       const imgFix1 = myRequest.replace(/data:image\/png;base64,/gi, "")
-       let img1 = new Buffer(imgFix1, 'base64');
-       require('fs').writeFile("./images/imageMain.png", img1, function () {
+        const imgFix1 = myRequest.replace(/data:image\/png;base64,/gi, "")
+        let img1 = new Buffer(imgFix1, 'base64');
+        require('fs').writeFile("./images/imageMain.png", img1, function () {
 
-         })
-       
-       async function callVis(fileName) {
+        })
+
+        async function callVis(fileName) {
             myResult.arr1 = await myVision(fileName);
             myResult.arr2 = await myVision2(fileName);
             myResult.arr3 = await myVision4(fileName);
@@ -38,7 +38,7 @@ module.exports = (app) => {
             console.log("myResult: " + JSON.stringify(myResult));
             res.json(myResult)
         }
-        
+
         prom1 = new Promise((resolve, reject) => {
             const imgFix = myRequest.replace(/data:image\/png;base64,/gi, "")
             let img = new Buffer(imgFix, 'base64');
@@ -56,31 +56,36 @@ module.exports = (app) => {
             }
         });
         prom1.then((value) => {
-                callVis(value);
-            })
+            callVis(value);
+        })
             .catch((err) => {
                 console.log("ERROR: " + err)
             })
     });
 
-    app.get("/api/logo", function(req, res) {             
-        console.log("Res2: "+JSON.stringify(myResult))
-        return res.json(myResult);
-    }); 
+    // app.get("/api/logo", function(req, res) {             
+    //     console.log("Res2: "+JSON.stringify(myResult))
+    //     return res.json(myResult);
+    // }); 
 
+    app.get("/api/logo", function (req, res) {
+        db.Classify.findAll({}).then(function (results) {
+            res.json(results);
+        })
+    });
+    
     //This is needed to serve the images
-    app.get("/images/:id",function(req,res)
-    {
+    app.get("/images/:id", function (req, res) {
         var name = req.params.id;
         console.log(name);
-        var npath = path.join(__dirname, '../images/'+name);
+        var npath = path.join(__dirname, '../images/' + name);
         res.sendFile(npath);
     });
 
     //this is needed to get the results of the urls we store in the server
-    app.get("/api/faceUrl", function(req, res) {                 
-        return res.json(imageFaceHelper.detectFaces("./images/imageMain.png")) ;
-    }); 
+    app.get("/api/faceUrl", function (req, res) {
+        return res.json(imageFaceHelper.detectFaces("./images/imageMain.png"));
+    });
 }
 
 function myVision(fileName) {
@@ -127,10 +132,10 @@ function myVision2(fileName) {
             .labelDetection(fileName)
             .then(results => {
                 const labels = results[0].labelAnnotations;
-                console.log('Labels:');                
-                labels.forEach(label => myArray.push(label.description)); 
+                console.log('Labels:');
+                labels.forEach(label => myArray.push(label.description));
                 console.log("res1: " + myArray);
-                resolve(myArray);             
+                resolve(myArray);
             })
             .catch(err => {
                 console.error('ERROR:', err);
@@ -161,7 +166,7 @@ function myVision4(fileName) {
             .then(results => {
                 const detections = results[0].textAnnotations;
                 console.log('Text:');
-                detections.forEach(text => myArray.push(text.description)); 
+                detections.forEach(text => myArray.push(text.description));
                 if (myArray[0] == undefined) {
                     myArray.push("No Text");
                 }
